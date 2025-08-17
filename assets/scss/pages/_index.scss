@@ -1,3 +1,24 @@
-.index-title {
-  font-size: 100px;
+.hero-bg {
+  background: url(/assets/images/index/hero-bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-search {
+  width: 720px;
+}
+
+.bg-search-position {
+  top: 50%;
+  right: 8px;
+}
+
+.p-hero {
+  padding-top: 212px;
+  padding-bottom: 474px;
+}
+
+.mt-90 {
+  margin-top: -90px;
 }

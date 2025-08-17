@@ -1,4 +1,35 @@
-<h1 class="header">header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand me-6" href="index.html">
+      <img src="/assets/images/LOGO.png" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="d-flex position-relative">
+        <span class="material-symbols-outlined text-neutral-60 position-absolute top-50 start-0 translate-middle-y ms-3">search</span>
+        <input class="form-control ps-8 search" type="search" placeholder="搜尋景點、地點或城市" aria-label="Search">
+      </form>
+      <div class="d-flex align-items-center ms-auto">
+        <a href="#" class="d-block">
+          <span class="material-symbols-outlined cart me-4">shopping_cart</span>
+        </a>
+        <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold" type="submit">登入 / 註冊</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { // 滾超過 50px
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
