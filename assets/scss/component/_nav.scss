@@ -1,0 +1,43 @@
+/*index*/
+.nav-pills .nav-link {
+  border: 1px solid transparent;
+  background-color: white;
+  margin-right: 8px;
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+} 
+
+/*search*/
+.nav-text .nav-link {
+  font-weight: 400;
+  padding: 16px 0px;
+  margin-right: 32px;
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  padding-bottom: 2px;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 25%;                /* 置中：因為寬度只有 50%，所以往右移 25% */
+  bottom: 0;
+  width: 50%;               /* 底線只佔一半 */
+  height: 4px;
+  background-color: $primary;
+  transform: scaleX(0);     /* 預設縮到 0，看不到 */
+  transform-origin: center; /* 從中間展開 */
+  transition: transform 0.3s ease;
+}
+
+.link-underline:hover::after,
+.link-underline.active::after {
+  transform: scaleX(1);
+  font-weight: 600;
+}

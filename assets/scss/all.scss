@@ -1,5 +1,28 @@
+/*字體*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
+
+/* Bootstrap 基礎必須先引入 */
+@import '../../node_modules/bootstrap/scss/functions';
+
+/*修改變數*/
+@import './helpers/variables';
+
+/*utils*/
+@import "../../node_modules/bootstrap/scss/maps";
+@import './helpers/utilities';
+@import './utils/fontStyle';
+
+/*component*/
+@import './component/nav';
+
+/*bootstrap*/
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"; 
+
+/*layout*/
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
-
+/*pages*/
 @import './pages/index.scss';
+
