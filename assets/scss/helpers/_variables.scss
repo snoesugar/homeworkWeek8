@@ -1244,7 +1244,7 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  $spacer * 1;//* .5 !default; custom
+$navbar-padding-y:                  $spacer * 0.75;//* .5 !default; custom
 $navbar-padding-x:                  null !default;
 
 $navbar-nav-link-padding-x:         .5rem !default;

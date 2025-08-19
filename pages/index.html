@@ -40,41 +40,40 @@
         </div>
       </div>
       <div class="container">
-        <div class="row">
-          <div class="col-4">
+        <div class="row recommend-row">
+          <div class="col h-600">
             <div class="card bg-dark text-white h-100 recommend-border">
-              <img src="/assets/images/index/recommend.png" class="card-img" alt="recommend">
+              <img src="/assets/images/index/recommend.png" class="card-img h-100" alt="recommend">
               <div class="card-img-overlay p-7 d-flex flex-column justify-content-end recommend-gradient">
                 <h5 class="card-title fs-2 fw-bold lh-sm">峇里島渡假漫遊</h5>
                 <p class="card-text fw-normal mb-6">精選五星級海灘度假村，專屬私人管家服務，讓您徹底放鬆身心。</p>
-                <button type="button" class="d-flex align-items-center bg-white p-5 rounded-8 fw-bold border-0">訂購行程<span class="material-symbols-outlined ms-auto">arrow_forward</span></button>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col h-600">
             <div class="card bg-dark text-white h-100 recommend-border">
               <img src="/assets/images/index/recommend-1.png" class="card-img h-100" alt="recommend-1">
               <div class="card-img-overlay p-7 d-flex flex-column justify-content-end recommend-gradient">
                 <h5 class="card-title fs-2 fw-bold lh-sm">日本深度賞櫻計畫</h5>
-                <p class="card-text fw-normal mb-0">春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。</p>
+                <p class="card-text fw-normal mb-6">春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。</p>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col h-600">
             <div class="card bg-dark text-white h-100 recommend-border">
               <img src="/assets/images/index/recommend-2.png" class="card-img h-100" alt="recommend-2">
               <div class="card-img-overlay p-7 d-flex flex-column justify-content-end recommend-gradient">
                 <h5 class="card-title fs-2 fw-bold lh-sm">紐西蘭雪山探險</h5>
-                <p class="card-text fw-normal mb-0">探索南島壯麗的自然風光，體驗各種極限運動和戶外活動。</p>
+                <p class="card-text fw-normal mb-6">探索南島壯麗的自然風光，體驗各種極限運動和戶外活動。</p>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col h-600">
             <div class="card bg-dark text-white h-100 recommend-border">
               <img src="/assets/images/index/recommend-3.png" class="card-img h-100" alt="recommend-3">
               <div class="card-img-overlay p-7 d-flex flex-column justify-content-end recommend-gradient">
                 <h5 class="card-title fs-2 fw-bold lh-sm">摩洛哥迷幻之旅</h5>
-                <p class="card-text fw-normal mb-0">漫步沙漠與古城之間，探索千年文化與色彩繽紛的市集風情。</p>
+                <p class="card-text fw-normal mb-6">漫步沙漠與古城之間，探索千年文化與色彩繽紛的市集風情。</p>
               </div>
             </div>
           </div>
@@ -706,6 +705,41 @@
           }
         });
       });
+    </script>
+    <!--卡片放大-->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cols = document.querySelectorAll('.recommend-row > .col, .recommend-row > .col-4');
+
+  cols.forEach(col => {
+    col.addEventListener('mouseenter', () => {
+      // 先還原所有區塊
+      cols.forEach(c => {
+        c.classList.remove('col-4');
+        c.classList.add('col');
+
+        // 移除按鈕（如果存在）
+        const overlay = c.querySelector('.card-img-overlay');
+        const btn = overlay.querySelector('.dynamic-btn');
+        if (btn) overlay.removeChild(btn);
+      });
+
+      // 當前區塊變成 col-4
+      col.classList.remove('col');
+      col.classList.add('col-4');
+
+      // 新增按鈕（如果不存在）
+      const overlay = col.querySelector('.card-img-overlay');
+      if (!overlay.querySelector('.dynamic-btn')) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'dynamic-btn d-flex align-items-center bg-white p-5 rounded-8 fw-bold border-0';
+        btn.innerHTML = '訂購行程 <span class="material-symbols-outlined ms-auto">arrow_forward</span>';
+        overlay.appendChild(btn);
+      }
+    });
+  });
+});
     </script>
   </body>
 </html>
