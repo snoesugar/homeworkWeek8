@@ -1,3 +1,14 @@
 .btn.btn-primary:hover {
   background-color: $primary-120;
 }
+
+.btn.btn-white {
+  background-color: white;
+  color: $primary;
+  padding: 16px 32px;
+  font-weight: 600;
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+}

@@ -346,6 +346,8 @@ $dark:          $gray-900 !default;
 $theme-colors: (
   "primary":    $primary,   //primary-100
   "primary-80": $primary-80,//custom
+  "primary-60": $primary-60,//custom
+  "primary-40": $primary-40,//custom
   "primary-10": $primary-10,//custom
   "secondary":  $secondary,
   "success":    $success,
@@ -354,8 +356,10 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
+  "neutral-80": $neutral-80, //custom
   "neutral-60": $neutral-60, //custom
-  "coffee":   #221F1E,
+  "coffee":     #221F1E,   //custom
+  "gray":       #808080,   //custom
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -586,7 +590,7 @@ $border-widths: (
   5: 5px
 ) !default;
 $border-style:                solid !default;
-$border-color:                $gray-300 !default;
+$border-color:                $neutral-40;//$gray-300 !default; custom
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
@@ -595,6 +599,9 @@ $border-radius:               .375rem !default;          //2:6px
 $border-radius-lg:            .5rem !default;            //3:8px
 $border-radius-xl:            .75rem;//1rem !default;    //4:12px
 $border-radius-xxl:           1rem;//2rem !default;      //5:16px
+$border-radius-3xl:           1.5rem;                    //6:24px
+$border-radius-4xl:           2rem;                      //7:32px
+$border-radius-5xl:           100px;                     //8:100px
 $border-radius-pill:          50rem !default;    
 // scss-docs-end border-radius-variables
 // fusv-disable
@@ -1224,7 +1231,7 @@ $nav-tabs-link-active-color:        var(--#{$prefix}emphasis-color) !default;
 $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg !default;
 
-$nav-pills-border-radius:           var(--#{$prefix}border-radius) !default;
+$nav-pills-border-radius:           8px;//var(--#{$prefix}border-radius) !default; custom
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
@@ -1396,7 +1403,7 @@ $card-title-color:                  null !default;
 $card-subtitle-color:               null !default;
 $card-border-width:                 var(--#{$prefix}border-width) !default;
 $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
-$card-border-radius:                var(--#{$prefix}border-radius) !default;
+$card-border-radius:                32px;//var(--#{$prefix}border-radius) !default; custom
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
