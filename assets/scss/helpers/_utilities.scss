@@ -808,6 +808,8 @@ $utilities: map-merge(
 //custom
 // 加到 CSS Variables
 :root {
+  --#{$prefix}border-radius-xl:   #{$border-radius-xl};
+  --#{$prefix}border-radius-xxl:  #{$border-radius-xxl};
   --#{$prefix}border-radius-3xl:  #{$border-radius-3xl};
   --#{$prefix}border-radius-4xl:  #{$border-radius-4xl};
   --#{$prefix}border-radius-5xl:  #{$border-radius-5xl};
@@ -821,6 +823,13 @@ $utilities: map-merge(
       property: border-radius,
       class: rounded,
       values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),   
+        2: var(--#{$prefix}border-radius),         //6px
+        3: var(--#{$prefix}border-radius-lg),      //8px
+        4: var(--#{$prefix}border-radius-xl),      //12px
+        5: var(--#{$prefix}border-radius-xxl),     //16px
         6: var(--#{$prefix}border-radius-3xl),     //24px
         7: var(--#{$prefix}border-radius-4xl),     //32px
         8: var(--#{$prefix}border-radius-5xl),     //100px

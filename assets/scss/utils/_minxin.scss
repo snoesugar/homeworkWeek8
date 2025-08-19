@@ -1,5 +1,87 @@
 @media (max-width: 992px) {
+  /*header*/
   .navbar.navbar-expand-lg {
-  background-color: white;
+    background-color: white;
+  }
+  /*footer*/
+  .logo-footer {
+    width: 192px;
+    height: 32px;
+  }
+
+  /*index*/
+  .hero-bg.p-hero {
+    padding-top: 114px;
+    padding-bottom: 162px;
+  }
+  .container.ps-122 {
+    padding-left: 12px;
+  }
+
+  /*斜角切*/
+  .bg-deco-rl-split,
+  .bg-deco-lr-split {
+    min-height: 40px !important; /*不知道被什麼擋*/
+  }
+
+  /*靈感地圖 RWD*/
+  .position-absolute.number-position {
+    top: -120px;
+    left: 20px;
+  }
+  .img-fluid.map-img {
+    width: 280px;
+    height: 200px;
+    width: 100%;
+    object-fit: cover; /* 填滿容器，同時保留比例 */
+    object-position: center center; /* 截取中心位置 */
+  }
+  /*搜尋墨爾本*/
+  .position-absolute.bg-one-position {
+    width: 45px;
+    height: 52px;
+    top: -20px;
+    left: 0px;
+  }
+  .col-md-6.mb-252 {
+    margin-bottom: 150px;
+  }
+  .heartBtn.heart-bg {
+    top: 0;
+    right: 0px;
+  }
+  /*跑馬燈*/
+  .marquee img {
+    height: 38px; /* 固定寬度 */
+    width: auto; /* 高度依比例縮放 */
+  }
+  /*把旅行變成生活的養分*/
+  .bg-primary-40.bg-down {
+    background-image: none;
+  }
+  .rwd-w-100 {
+    width: 100%;
+  }
+}
+
+/*文字中斷點*/
+@media (min-width: 992px) {
+  .fs-lg-1.fs-3 {
+    font-size: 48px !important;
+  }
+  .fs-lg-1.fs-5 {
+    font-size: 48px !important;
+  }
+  .fs-lg-6.fs-8 {
+    font-size: 20px !important;
+  }
+  .fs-lg-6.fs-9 {
+    font-size: 20px !important;
+  }
+  .fs-lg-8.fs-9 {
+    font-size: 16px !important;
+  }
+  .display-lg-2.display-6 {
+    font-size: 72px !important;
   }
 }
