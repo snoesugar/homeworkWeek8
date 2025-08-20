@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首頁</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script type="module" crossorigin src="/homeworkWeek8/assets/main-A-uz7GTA.js"></script>
-    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-9Q4XOkz7.css">
+    <script type="module" crossorigin src="/homeworkWeek8/assets/main-BBNehni4.js"></script>
+    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-Bv6hLKBs.css">
   </head>
   <body>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -170,7 +170,8 @@
                   <div class="card-img-overlay p-7 d-flex flex-column justify-content-end recommend-gradient">
                     <h5 class="card-title fs-2 fw-bold lh-sm">日本深度賞櫻計畫</h5>
                     <p class="card-text fw-normal mb-6">春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。</p>
-                    <button type="button" class="d-flex align-items-center bg-white p-5 rounded-8 fw-bold border-0">訂購行程 <span class="material-symbols-outlined ms-auto">arrow_forward</span></button>
+                    <button type="button" class="d-flex align-items-center bg-white p-5 rounded-8 fw-bold border-0" onclick="window.location.href='search.html'">
+                      訂購行程 <span class="material-symbols-outlined ms-auto">arrow_forward</span></button>
                   </div>
                 </div>
               </div>
@@ -331,7 +332,7 @@
                           <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
                           <p class="text-primary mb-0">賞楓最佳時間是 11 月中旬，推薦清水寺和南禪寺一帶 🍁</p>
                         </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">立即探索魅力古都
+                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100" onclick="window.location.href='search.html'">立即探索魅力古都
                           <div class="bg-white rounded-8 ms-auto">
                             <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
                           </div>
@@ -659,7 +660,7 @@
                           <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
                           <p class="text-primary fs-lg-8 fs-9 mb-0">賞楓最佳時間是 11 月中旬，推薦清水寺和南禪寺一帶 🍁</p>
                         </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">立即探索魅力古都
+                        <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100" onclick="window.location.href='search.html'">立即探索魅力古都
                           <div class="bg-white rounded-8 ms-auto">
                             <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
                           </div>
@@ -796,7 +797,7 @@
     <div class="bg-deco-lr-split"></div>
 
     <!--搜尋墨爾本-->
-    <div class="bg-white py-lg-14 py-8">
+    <div class="bg-white py-lg-14 py-8 overflow-x-hidden">
       <div class="container">
         <!--桌面板-->
         <div class="row">
@@ -1173,38 +1174,38 @@
     </script>
     <!--卡片放大-->
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const cols = document.querySelectorAll('.recommend-row > .col, .recommend-row > .col-4');
+      document.addEventListener('DOMContentLoaded', () => {
+        const cols = document.querySelectorAll('.recommend-row > .col, .recommend-row > .col-4');
 
-  cols.forEach(col => {
-    col.addEventListener('mouseenter', () => {
-      // 先還原所有區塊
-      cols.forEach(c => {
-        c.classList.remove('col-4');
-        c.classList.add('col');
+        cols.forEach(col => {
+          col.addEventListener('mouseenter', () => {
+            // 先還原所有區塊
+            cols.forEach(c => {
+              c.classList.remove('col-4');
+              c.classList.add('col');
 
-        // 移除按鈕（如果存在）
-        const overlay = c.querySelector('.card-img-overlay');
-        const btn = overlay.querySelector('.dynamic-btn');
-        if (btn) overlay.removeChild(btn);
+              // 移除按鈕（如果存在）
+              const overlay = c.querySelector('.card-img-overlay');
+              const btn = overlay.querySelector('.dynamic-btn');
+              if (btn) overlay.removeChild(btn);
+            });
+
+            // 當前區塊變成 col-4
+            col.classList.remove('col');
+            col.classList.add('col-4');
+
+            // 新增按鈕（如果不存在）
+            const overlay = col.querySelector('.card-img-overlay');
+            if (!overlay.querySelector('.dynamic-btn')) {
+              const btn = document.createElement('button');
+              btn.type = 'button';
+              btn.className = 'dynamic-btn d-flex align-items-center bg-white p-5 rounded-8 fw-bold border-0';
+              btn.innerHTML = '訂購行程 <span class="material-symbols-outlined ms-auto">arrow_forward</span>';
+              overlay.appendChild(btn);
+            }
+          });
+        });
       });
-
-      // 當前區塊變成 col-4
-      col.classList.remove('col');
-      col.classList.add('col-4');
-
-      // 新增按鈕（如果不存在）
-      const overlay = col.querySelector('.card-img-overlay');
-      if (!overlay.querySelector('.dynamic-btn')) {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'dynamic-btn d-flex align-items-center bg-white p-5 rounded-8 fw-bold border-0';
-        btn.innerHTML = '訂購行程 <span class="material-symbols-outlined ms-auto">arrow_forward</span>';
-        overlay.appendChild(btn);
-      }
-    });
-  });
-});
     </script>
 
     <!--輪播-->
