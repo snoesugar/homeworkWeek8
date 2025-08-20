@@ -1,3 +1,13 @@
+/*大阪*/
+.swiper .btn {
+  z-index: 10;
+}
+
+.h-240 {
+  height: 240px;
+  width: 100%;
+}
+
 .card-hover-shadow {
   transition: box-shadow 0.3s ease; /* 陰影出現/消失的漸變 */
 }
