@@ -14,6 +14,7 @@
   font-weight: 400;
   padding: 16px 0px;
   margin-right: 32px;
+  color: $neutral-80;
 }
 
 .link-underline {
@@ -40,4 +41,12 @@
 .link-underline.active::after {
   transform: scaleX(1);
   font-weight: 600;
+  color: $primary;
+}
+
+.link-underline:hover,
+.link-underline.active {
+  transform: scaleX(1);
+  font-weight: 600;
+  color: $primary;
 }

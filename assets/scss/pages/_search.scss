@@ -1,0 +1,52 @@
+.card-hover-shadow {
+  transition: box-shadow 0.3s ease; /* 陰影出現/消失的漸變 */
+}
+
+.card-hover-shadow:hover {
+  box-shadow: 0 0px 40px rgba(0, 0, 0, 0.1); /* 滑鼠觸碰時的陰影 */
+}
+
+.category-img {
+  width: 150px;
+  height: 150px;
+}
+
+.px-44 {
+  padding-right: 44px;
+  padding-left: 44px;
+}
+
+/*大阪TOP 10*/
+
+/* big-hover hover 時圖片放大 */
+.big-hover:hover img {
+  transform: scale(1.1);
+}
+
+/* big-hover hover 時 h3 文字顏色變 primary */
+.big-hover:hover h3 {
+  color: var(--bs-primary);
+}
+
+/* 平滑過渡 */
+.big-hover img,
+.big-hover h3 {
+  transition: all 0.3s ease;
+}
+
+/*旅人攻略*/
+
+/* hover-card hover 時文字顏色變化 */
+.change-hover:hover h3 {
+  color: $primary;
+}
+
+.change-hover:hover p{
+  color: $primary-60 !important; /*逼不得已用important*/ 
+}
+
+/* 平滑過渡 */
+.change-hover h3,
+.change-hover p {
+  transition: color 0.3s ease;
+}

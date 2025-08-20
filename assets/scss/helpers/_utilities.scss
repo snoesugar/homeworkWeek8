@@ -729,11 +729,14 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        1: var(--#{$prefix}border-radius-sm),   
+        2: var(--#{$prefix}border-radius),         //6px
+        3: var(--#{$prefix}border-radius-lg),      //8px
+        4: var(--#{$prefix}border-radius-xl),      //12px
+        5: var(--#{$prefix}border-radius-xxl),     //16px custom
+        6: var(--#{$prefix}border-radius-3xl),     //24px
+        7: var(--#{$prefix}border-radius-4xl),     //32px
+        8: var(--#{$prefix}border-radius-5xl),     //100px
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -774,11 +777,14 @@ $utilities: map-merge(
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
+        1: var(--#{$prefix}border-radius-sm),   
+        2: var(--#{$prefix}border-radius),         //6px
+        3: var(--#{$prefix}border-radius-lg),      //8px
+        4: var(--#{$prefix}border-radius-xl),      //12px
+        5: var(--#{$prefix}border-radius-xxl),     //16px custom
+        6: var(--#{$prefix}border-radius-3xl),     //24px
+        7: var(--#{$prefix}border-radius-4xl),     //32px
+        8: var(--#{$prefix}border-radius-5xl),     //100px
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -834,6 +840,38 @@ $utilities: map-merge(
         7: var(--#{$prefix}border-radius-4xl),     //32px
         8: var(--#{$prefix}border-radius-5xl),     //100px
       )
-    )
+    ),
+    "rounded-top-right": (
+      property: border-top-right-radius,
+      class: rounded-top-right,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),   
+        2: var(--#{$prefix}border-radius),         //6px
+        3: var(--#{$prefix}border-radius-lg),      //8px
+        4: var(--#{$prefix}border-radius-xl),      //12px
+        5: var(--#{$prefix}border-radius-xxl),     //16px
+        6: var(--#{$prefix}border-radius-3xl),     //24px
+        7: var(--#{$prefix}border-radius-4xl),     //32px
+        8: var(--#{$prefix}border-radius-5xl),     //100px
+      )
+    ),
+    "rounded-bottom-right": (
+      property: border-bottom-right-radius,
+      class: rounded-bottom-right,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),   
+        2: var(--#{$prefix}border-radius),         //6px
+        3: var(--#{$prefix}border-radius-lg),      //8px
+        4: var(--#{$prefix}border-radius-xl),      //12px
+        5: var(--#{$prefix}border-radius-xxl),     //16px
+        6: var(--#{$prefix}border-radius-3xl),     //24px
+        7: var(--#{$prefix}border-radius-4xl),     //32px
+        8: var(--#{$prefix}border-radius-5xl),     //100px
+      )
+    ),
   )
 );
