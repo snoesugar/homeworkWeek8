@@ -1,0 +1,40 @@
+.pt-210 {
+  padding-top: 210px;
+}
+
+.bg-line {
+  background-image: url(/assets/images/user/bg-line.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; 
+}
+
+.wh-160 {
+  width: 160px;
+  height: 160px;
+}
+
+.ps-36 {
+  padding-left: 36px;
+}
+
+.pe-36 {
+  padding-right: 36px;
+}
+
+.edit-hover {
+  color: $primary;
+}
+
+.edit-hover:hover {
+  color: white;
+}
+
+.rounded-20 {
+  border-radius: 20px;
+}
+
+.wh-40 {
+  width: 40px;
+  height: 40px;
+}

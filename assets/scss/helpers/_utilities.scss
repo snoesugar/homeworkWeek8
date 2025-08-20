@@ -839,6 +839,8 @@ $utilities: map-merge(
         6: var(--#{$prefix}border-radius-3xl),     //24px
         7: var(--#{$prefix}border-radius-4xl),     //32px
         8: var(--#{$prefix}border-radius-5xl),     //100px
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
       )
     ),
     "rounded-top-right": (
