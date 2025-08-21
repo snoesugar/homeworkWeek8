@@ -72,6 +72,18 @@
     padding-left: 28px;
     padding-right: 28px;
   }
+
+  /*member*/
+  .container.pt-210 {
+    padding-top: 130px;
+  }
+  .border-primary.wh-160 {
+    height: 120px;
+    width: 120px;
+  }
+  .edit-hover {
+    width: 100%;
+  }
 }
 
 /*文字中斷點*/
@@ -84,6 +96,9 @@
   }
   .fs-lg-2.fs-4 {
     font-size: 40px !important;
+  }
+  .fs-lg-5.fs-6 {
+    font-size: 24px !important;
   }
   .fs-lg-6.fs-8 {
     font-size: 20px !important;

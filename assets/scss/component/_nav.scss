@@ -50,3 +50,28 @@
   font-weight: 600;
   color: $primary;
 }
+
+/*member*/
+.link-underline-primary {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.link-underline-primary::after {
+  content: "";
+  position: absolute;
+  left: 0%;                /* 置中：因為寬度只有 50%，所以往右移 25% */
+  bottom: -8px;
+  width: 100%;               /* 底線只佔一半 */
+  height: 4px;
+  background-color: $primary-40;
+  transform: scaleX(0);     /* 預設縮到 0，看不到 */
+  transform-origin: center; /* 從中間展開 */
+  transition: transform 0.3s ease;
+}
+
+.link-underline-primary:hover::after,
+.link-underline-primary.active::after {
+  transform: scaleX(1);
+}

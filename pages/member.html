@@ -9,12 +9,12 @@
   </head>
   <body>
     <%- include('./layout/header'); -%> 
-      <div class="bg-neutral-15 bg-line mt-90 pb-14">
+      <div class="bg-neutral-15 bg-line mt-90 pb-lg-14 pb-8">
         <!--個人封面-->
-        <div class="container pt-210 pb-14 text-center mb-12">
+        <div class="container pt-210 text-center mb-lg-12 mb-8">
           <div class="position-relative">
             <img src="/assets/images/user/hero.png" class="img-fluid rounded-6" alt="hero">
-            <a href="#" class="d-inline-flex align-items-center text-decoration-none position-absolute m-7 bottom-0 end-0">
+            <a href="#" class="d-lg-inline-flex d-none align-items-center text-decoration-none position-absolute m-7 bottom-0 end-0">
               <span class="material-symbols-outlined text-white me-2">edit</span>
               <span class="text-white">更換封面</span>
             </a>
@@ -25,23 +25,23 @@
               <span class="material-symbols-outlined text-white p-2">edit</span>
             </div>
           </div>
-          <h2 class="fs-5 text-primary fw-bold mb-1">Jessica</h2>
-          <p class="text-neutral-80 mb-0">jessica.yen@gmail.com</p>
+          <h2 class="fs-lg-5 fs-6 text-primary fw-bold mb-1">Jessica Yen</h2>
+          <p class="fs-lg-8 fs-9 text-neutral-80 mb-0">jessica.yen@gmail.com</p>
         </div>
         <!--列表-->
-        <div class="container pb-6">
+        <div class="container pb-lg-6 pb-4">
           <div class="bg-white rounded-6">
             <ul class="row d-flex list-unstyled fw-bold mb-0 py-3">
-              <li class="col-4 py-3 ps-36 pe-6"><a href="#" class="text-black text-decoration-none">我的帳號</a></li>
-              <li class="col-4 py-3 px-6 border-start border-end"><a href="#" class="text-black text-decoration-none">訂單管理</a></li>
-              <li class="col-4 py-3 pe-36 ps-6"><a href="#" class="text-black text-decoration-none">我的收藏</a></li>
+              <li class="col-4 py-3 ps-36 pe-6"><a href="#" class="text-black text-decoration-none link-underline-primary active">我的帳號</a></li>
+              <li class="col-4 py-3 px-6 border-start border-end"><a href="#" class="text-black text-decoration-none link-underline-primary">訂單管理</a></li>
+              <li class="col-4 py-3 pe-36 ps-6"><a href="#" class="text-black text-decoration-none link-underline-primary">我的收藏</a></li>
             </ul>
           </div>
         </div>
         <!--我的帳號-->
         <div class="container">
-          <div class="bg-white rounded-6 px-7 pt-10 pb-7">
-            <h1 class="fw-bold mb-8">我的帳號</h1>
+          <div class="bg-white rounded-6 px-lg-7 pt-lg-10 pb-lg-7 px-4 pt-7 pb-4">
+            <h1 class="fs-lg-1 fs-3 fw-bold mb-8">我的帳號</h1>
             <ul class="nav nav-text border-bottom mb-6 overflow-auto" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link link-underline" id="pills-member-tab" data-bs-toggle="pill" data-bs-target="#pills-member" type="button" role="tab" aria-controls="pills-member" aria-selected="true">個人資訊</button>
@@ -54,39 +54,84 @@
               <div class="tab-pane fade show active" id="pills-member" role="tabpanel" aria-labelledby="pills-member-tab">
                 <ul class="list-unstyled mb-8">
                   <li class="mb-6">
-                    <p class="text-neutral-80 mb-2">姓名</p>
-                    <p class="fs-6 fw-bold mb-0">Jessica Yen</p>
+                    <p class="fs-lg-8 fs-9 text-neutral-80 mb-2">姓名</p>
+                    <p class="fs-lg-6 fs-8 fw-bold mb-0">Jessica Yen</p>
                   </li>
                   <li class="mb-6">
-                    <p class="text-neutral-80 mb-2">電子信箱</p>
-                    <p class="fs-6 fw-bold mb-0">jessica.yen@gmail.com</p>
+                    <p class="fs-lg-8 fs-9 text-neutral-80 mb-2">電子信箱</p>
+                    <p class="fs-lg-6 fs-8 fw-bold mb-0">jessica.yen@gmail.com</p>
                   </li>
                   <li class="mb-6">
-                    <p class="text-neutral-80 mb-2">密碼</p>
-                    <p class="fs-6 fw-bold mb-0">************</p>
+                    <p class="fs-lg-8 fs-9 text-neutral-80 mb-2">密碼</p>
+                    <p class="fs-lg-6 fs-8 fw-bold mb-0">************</p>
                   </li>
                   <li class="mb-6">
-                    <p class="text-neutral-80 mb-2">聯絡電話</p>
-                    <p class="fs-6 fw-bold mb-0">+886 912-345-678</p>
+                    <p class="fs-lg-8 fs-9 text-neutral-80 mb-2">聯絡電話</p>
+                    <p class="fs-lg-6 fs-8 fw-bold mb-0">+886 912-345-678</p>
                   </li>
                   <li class="mb-6">
-                    <p class="text-neutral-80 mb-2">地址</p>
-                    <p class="fs-6 fw-bold mb-0">台北市士林區幸福路193號5樓之1</p>
+                    <p class="fs-lg-8 fs-9 text-neutral-80 mb-2">地址</p>
+                    <p class="fs-lg-6 fs-8 fw-bold mb-0">台北市士林區幸福路193號5樓之1</p>
                   </li>
                   <li class="mb-6">
-                    <p class="text-neutral-80 mb-2">生日</p>
-                    <p class="fs-6 fw-bold mb-0">1995-09-20</p>
+                    <p class="fs-lg-8 fs-9 text-neutral-80 mb-2">生日</p>
+                    <p class="fs-lg-6 fs-8 fw-bold mb-0">1995-09-20</p>
                   </li>
                 </ul>
-                <button type="button" class="btn btn-white border border-1 border-primary d-flex align-items-center py-4 px-7 edit-hover ms-auto"><span class="material-symbols-outlined me-1">edit</span>編輯資訊</button>
+                <button type="button" class="btn btn-white border border-1 border-primary d-flex justify-content-center align-items-center py-4 px-7 edit-hover ms-lg-auto"><span class="material-symbols-outlined me-1">edit</span>編輯資訊</button>
               </div>
               <div class="tab-pane fade" id="pills-person" role="tabpanel" aria-labelledby="pills-person-tab">
-                <div class="d-flex align-items-center p-6 border rounded-20">
-                  <div class="d-block border border-1 rounded-circle border-primary wh-40 me-2">
-                    <img src="/assets/images/user/avatar-1.png" class="img-fluid" alt="avatar-1">
+                <div class="d-flex align-items-lg-center flex-lg-row align-items-start flex-column p-6 border rounded-20 mb-3">
+                  <div class="d-flex align-items-center mb-lg-0 mb-4">
+                    <div class="d-block border border-1 rounded-circle border-primary wh-40 me-2">
+                      <img src="/assets/images/user/avatar-1.png" class="img-fluid" alt="avatar-1">
+                    </div>
+                    <span class="fs-6 fw-bold mb-0">Jessica Yen</span>
                   </div>
-                  <span class="fs-6 fw-bold">Jessica Yen</span>
+                  <div class="d-lg-none d-flex w-100">
+                    <button type="button" class="btn btn-white border border-1 border-primary d-flex justify-content-center align-items-center fw-semiblod py-4 px-7 edit-hover me-2"><span class="material-symbols-outlined me-1">edit</span>編輯資訊</button>
+                    <button type="button" class="btn btn-white border border-1 border-primary d-flex justify-content-center align-items-center fw-semiblod py-4 px-7 edit-hover"><span class="material-symbols-outlined me-1">close</span>刪除</button>
+                  </div>
                 </div>
+                <div class="d-flex align-items-lg-center flex-lg-row align-items-start flex-column p-6 border rounded-20 mb-8 bg-member-hover">
+                  <div class="d-flex align-items-center mb-lg-0 mb-4">
+                    <div class="d-block border border-1 rounded-circle border-primary wh-40 me-2">
+                      <img src="/assets/images/user/avatar-2.jpg" class="img-fluid wh-40 rounded-circle" alt="avatar-2">
+                    </div>
+                    <span class="fs-6 fw-bold mb-lg-0 mb-2">Jenny Lin</span>
+                  </div>
+                  <div class="d-lg-none d-flex w-100">
+                    <button type="button" class="btn btn-white border border-1 border-primary d-flex justify-content-center align-items-center fw-semiblod py-4 px-7 edit-hover me-2"><span class="material-symbols-outlined me-1">edit</span>編輯資訊</button>
+                    <button type="button" class="btn btn-white border border-1 border-primary d-flex justify-content-center align-items-center fw-semiblod py-4 px-7 edit-hover"><span class="material-symbols-outlined me-1">close</span>刪除</button>
+                  </div>
+                  <div class="member-hover w-100">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                      <div class="d-flex flex-column">
+                        <span class="fs-6 fw-bold mb-2">Jenny Lin</span>
+                        <p class="d-flex align-items-center text-primary mb-1">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 8.66667C2 7.95942 2.28095 7.28115 2.78105 6.78105C3.28115 6.28095 3.95942 6 4.66667 6H11.3333C12.0406 6 12.7189 6.28095 13.219 6.78105C13.719 7.28115 14 7.95942 14 8.66667V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V8.66667Z" stroke="#4A3830" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2 8.66663L3.94267 10.2206C4.734 10.854 5.876 10.7906 6.59267 10.074C6.77746 9.88911 6.99686 9.74248 7.23834 9.64244C7.47981 9.5424 7.73862 9.49091 8 9.49091C8.26138 9.49091 8.52019 9.5424 8.76166 9.64244C9.00314 9.74248 9.22254 9.88911 9.40733 10.074C9.75362 10.4202 10.2154 10.6265 10.7043 10.6536C11.1932 10.6806 11.675 10.5265 12.0573 10.2206L14 8.66663" stroke="#4A3830" stroke-width="1.33333" stroke-linecap="round"/>
+                          <path d="M8.0013 3.99996C7.64768 3.99996 7.30854 3.85948 7.05849 3.60943C6.80844 3.35939 6.66797 3.02025 6.66797 2.66663C6.66797 2.08263 7.1193 1.61596 7.51664 1.18863L8.0013 0.666626L8.48597 1.18863C8.8833 1.61596 9.33464 2.08263 9.33464 2.66663C9.33464 3.02025 9.19416 3.35939 8.94411 3.60943C8.69406 3.85948 8.35492 3.99996 8.0013 3.99996Z" stroke="#4A3830" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          Jenny.Linnn@gmail.com
+                        </p>
+                        <p class="d-flex align-items-center text-primary mb-1">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.66667 3.33337H13.3333C13.7 3.33337 14 3.63337 14 4.00004V12C14 12.3667 13.7 12.6667 13.3333 12.6667H2.66667C2.3 12.6667 2 12.3667 2 12V4.00004C2 3.63337 2.3 3.33337 2.66667 3.33337Z" stroke="#4A3830" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2 4.33337L8 8.00004L14 4.33337" stroke="#4A3830" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          2001.01.30
+                        </p>
+                      </div>
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-white border border-1 border-primary d-flex align-items-center fw-semiblod py-4 px-7 edit-hover me-2"><span class="material-symbols-outlined me-1">edit</span>編輯資訊</button>
+                        <button type="button" class="btn btn-white border border-1 border-primary d-flex align-items-center fw-semiblod py-4 px-7 edit-hover"><span class="material-symbols-outlined me-1">close</span>刪除</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-white border border-1 border-primary d-flex justify-content-center align-items-center fw-semiblod py-4 px-7 edit-hover ms-auto"><span class="material-symbols-outlined me-1">add</span>新增常用旅客</button>
               </div>
             </div>
           </div>
