@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>地點搜尋頁</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script type="module" crossorigin src="/homeworkWeek8/assets/main-BQ3NiP5T.js"></script>
+    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-DJTgk4uP.css">
+  </head>
+  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<nav class="navbar navbar-expand-lg navbar-light py-lg-4">
+  <div class="container">
+    <a class="me-6" href="index.html">
+      <img src="data:image/png;base64,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" alt="logo">
+    </a>
+    <form class="d-lg-flex d-none position-relative">
+      <span class="material-symbols-outlined text-neutral-60 position-absolute top-50 start-0 translate-middle-y ms-3">search</span>
+      <input class="form-control ps-8 search" type="search" placeholder="搜尋景點、地點或城市" aria-label="Search">
+    </form>
+    <div class="d-lg-flex d-none align-items-center ms-auto">
+      <a href="#" class="d-block">
+        <span class="material-symbols-outlined cart me-4">shopping_cart</span>
+      </a>
+      <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold" type="submit">登入 / 註冊</button>
+    </div>
+    <!--手機板-->
+    <div class="d-lg-none d-flex align-items-center ms-auto">
+      <a href="#" class="d-block">
+        <span class="material-symbols-outlined text-neutral-80 p-2">search</span>
+      </a>
+      <a href="#" class="d-block">
+        <span class="material-symbols-outlined cart text-neutral-80 py-2 px-3">shopping_cart</span>
+      </a>
+    </div>
+    <button type="button" class="d-lg-none d-block bg-white text-neutral-80 border-0 p-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!--右側欄-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header px-7 pt-7 pb-0">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-6 d-flex flex-column">
+    <div class="d-flex align-items-center pb-4 border-bottom">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="16" fill="#CBB6AF"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20 13C20 14.0609 19.5786 15.0783 18.8284 15.8284C18.0783 16.5786 17.0609 17 16 17C14.9391 17 13.9217 16.5786 13.1716 15.8284C12.4214 15.0783 12 14.0609 12 13C12 11.9391 12.4214 10.9217 13.1716 10.1716C13.9217 9.42143 14.9391 9 16 9C17.0609 9 18.0783 9.42143 18.8284 10.1716C19.5786 10.9217 20 11.9391 20 13ZM18 13C18 13.5304 17.7893 14.0391 17.4142 14.4142C17.0391 14.7893 16.5304 15 16 15C15.4696 15 14.9609 14.7893 14.5858 14.4142C14.2107 14.0391 14 13.5304 14 13C14 12.4696 14.2107 11.9609 14.5858 11.5858C14.9609 11.2107 15.4696 11 16 11C16.5304 11 17.0391 11.2107 17.4142 11.5858C17.7893 11.9609 18 12.4696 18 13Z" fill="#F3EEEC"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16 5C9.925 5 5 9.925 5 16C5 22.075 9.925 27 16 27C22.075 27 27 22.075 27 16C27 9.925 22.075 5 16 5ZM7 16C7 18.09 7.713 20.014 8.908 21.542C9.74723 20.4399 10.8299 19.5467 12.0714 18.9323C13.313 18.3179 14.6797 17.9988 16.065 18C17.4323 17.9987 18.7819 18.3095 20.0109 18.9088C21.2399 19.508 22.316 20.3799 23.157 21.458C24.0234 20.3216 24.6068 18.9952 24.8589 17.5886C25.111 16.182 25.0244 14.7355 24.6065 13.369C24.1886 12.0024 23.4512 10.755 22.4555 9.73004C21.4598 8.70503 20.2343 7.93186 18.8804 7.47451C17.5265 7.01716 16.0832 6.88877 14.6699 7.09997C13.2565 7.31117 11.9138 7.85589 10.7528 8.68905C9.59175 9.52222 8.64581 10.6199 7.99323 11.8912C7.34065 13.1625 7.00018 14.571 7 16ZM16 25C13.9339 25.0031 11.9303 24.2923 10.328 22.988C10.9729 22.0647 11.8313 21.3109 12.8302 20.7907C13.829 20.2705 14.9388 19.9992 16.065 20C17.1772 19.9991 18.2735 20.2636 19.2629 20.7714C20.2524 21.2793 21.1064 22.0159 21.754 22.92C20.1393 24.2667 18.1026 25.0029 16 25Z" fill="#F3EEEC"/>
+      </svg>
+      <div class="d-inline-flex flex-column">
+        <span class="fw-bold text-primary">訪客</span>
+        <span class="fw-normal text-neutral-80">未登入</span>
+      </div>
+    </div>
+    <h6 class="fw-bold text-primary mt-6 mb-1">歡迎來到 ZOBAA</h6>
+    <p class="fw-normal text-neutral-80">加入會員即可立即訂購、收藏行程，並享相關優惠好禮。</p>
+    <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold w-100 mt-auto" type="submit">登入 / 註冊</button>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { // 滾超過 50px
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>    
+    <div class="bg-neutral-10">
+      <!--阿倍野Harukas300觀覽台-->
+      <div class="container py-lg-12 py-8">
+        <div class="d-lg-block d-none">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item "><a href="index.html" class="text-decoration-none">首頁</a></li>
+              <li class="breadcrumb-item"><a href="#" class="text-decoration-none">日本</a></li>
+              <li class="breadcrumb-item"><a href="#" class="text-decoration-none">關西</a></li>
+              <li class="breadcrumb-item"><a href="search.html" class="text-decoration-none">大阪</a></li>
+              <li class="breadcrumb-item active text-neutral-60" aria-current="page">阿倍野Harukas300觀覽台</li>
+            </ol>
+          </nav>
+        </div> 
+        <!--桌面板--> 
+        <div class="row position-relative d-lg-flex d-none mb-6">
+          <div class="col-8 pe-1">
+            <img src="/homeworkWeek8/assets/harukas-1-wvTkdtXp.png" class="img-fluid h-100 object-fit-cover rounded-start-7" alt="harukas-1">
+          </div>
+          <div class="col-4">
+            <div class="row">
+              <div class="col-12 ps-1 mb-2">
+                <img src="/homeworkWeek8/assets/harukas-2-BKk2DKuS.png" class="img-fluid h-100 object-fit-cover rounded-top-right-7" alt="harukas-2">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 ps-1">
+                <img src="/homeworkWeek8/assets/harukas-3-DqthgVw_.png" class="img-fluid h-100 object-fit-cover rounded-bottom-right-7" alt="harukas-3">
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-white border border-primary rounded-4 position-absolute end-0 bottom-0 w-auto m-7">查看更多</button>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="bg-primary-10 rounded-6 p-6">
+              <div class="d-flex flex-column">
+                <div class="d-flex">
+                  <h2 class="fs-3 fw-bold me-2 mb-0">阿倍野Harukas300觀覽台</h2>
+                  <div class="d-flex heartBtn p-3">
+                    <span class="material-symbols-outlined d-block text-primary me-3">favorite</span>
+                    <span class="text-primary fw-bold">收藏</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-6 border-bottom">
+                  <svg width="16" height="16" viewBox="0 0 12 12" fill="none" class="me-1" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00001 9.53617L2.73751 11.2177C2.71281 11.2304 2.68507 11.236 2.65737 11.2339C2.62967 11.2318 2.6031 11.222 2.58062 11.2057C2.55815 11.1893 2.54065 11.1671 2.53008 11.1414C2.51951 11.1157 2.51628 11.0876 2.52076 11.0602L3.11326 7.43767L0.504757 4.85617C0.484628 4.83686 0.470348 4.81226 0.463551 4.78521C0.456754 4.75815 0.457716 4.72973 0.466326 4.70319C0.474936 4.67666 0.490846 4.65308 0.512234 4.63517C0.533622 4.61726 0.559622 4.60574 0.587257 4.60192L4.21501 4.04467L5.86501 0.767172C5.87745 0.742211 5.8966 0.721213 5.92031 0.706535C5.94403 0.691857 5.97137 0.684082 5.99926 0.684082C6.02715 0.684082 6.05448 0.691857 6.0782 0.706535C6.10191 0.721213 6.12107 0.742211 6.13351 0.767172L7.78351 4.04467L11.4113 4.60192C11.4387 4.60601 11.4645 4.61767 11.4857 4.63562C11.5069 4.65356 11.5227 4.67707 11.5313 4.70349C11.5399 4.72991 11.5409 4.7582 11.5343 4.78517C11.5276 4.81215 11.5136 4.83673 11.4938 4.85617L8.88751 7.43842L9.47851 11.0609C9.48282 11.0883 9.47947 11.1163 9.46883 11.1419C9.45819 11.1675 9.44068 11.1896 9.41823 11.2058C9.39579 11.222 9.36929 11.2317 9.34167 11.2338C9.31405 11.2359 9.28639 11.2303 9.26176 11.2177L6.00001 9.53617Z" fill="#F6BD2B"/>
+                  </svg>
+                  <span class="fs-8 fw-bold me-1">4.8</span>
+                  <span class="fs-9 text-neutral-60 border-14 pe-3">(1029)</span>
+                  <span class="fs-9 border-14 px-3">1,000+ 個已訂購</span>
+                  <svg width="16" height="16" viewBox="0 0 12 16" fill="none" class="ms-3 me-1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 2.00002C4.76232 2.00002 3.57534 2.49168 2.70017 3.36685C1.825 4.24202 1.33333 5.429 1.33333 6.66668C1.33333 8.57468 2.52133 10.4153 3.82533 11.8413C4.49209 12.5678 5.21962 13.236 6 13.8387C6.11644 13.7493 6.25311 13.6405 6.41 13.512C7.03654 12.9975 7.62621 12.4397 8.17467 11.8427C9.47867 10.4153 10.6667 8.57535 10.6667 6.66668C10.6667 5.429 10.175 4.24202 9.29983 3.36685C8.42466 2.49168 7.23768 2.00002 6 2.00002ZM6 15.476L5.622 15.216L5.62 15.2147L5.616 15.2113L5.60267 15.202L5.55267 15.1667L5.37267 15.0353C4.46057 14.3499 3.61325 13.5822 2.84133 12.742C1.47867 11.25 0 9.09068 0 6.66601C2.37122e-08 5.07472 0.632141 3.54859 1.75736 2.42337C2.88258 1.29816 4.4087 0.666016 6 0.666016C7.5913 0.666016 9.11742 1.29816 10.2426 2.42337C11.3679 3.54859 12 5.07472 12 6.66601C12 9.09068 10.5213 11.2507 9.15867 12.7407C8.38696 13.5808 7.53986 14.3485 6.628 15.034C6.55204 15.0908 6.47536 15.1465 6.398 15.2013L6.384 15.2107L6.38 15.214L6.37867 15.2147L6 15.476ZM6 5.33335C5.64638 5.33335 5.30724 5.47382 5.05719 5.72387C4.80714 5.97392 4.66667 6.31306 4.66667 6.66668C4.66667 7.0203 4.80714 7.35944 5.05719 7.60949C5.30724 7.85954 5.64638 8.00001 6 8.00001C6.35362 8.00001 6.69276 7.85954 6.94281 7.60949C7.19286 7.35944 7.33333 7.0203 7.33333 6.66668C7.33333 6.31306 7.19286 5.97392 6.94281 5.72387C6.69276 5.47382 6.35362 5.33335 6 5.33335ZM3.33333 6.66668C3.33333 5.95944 3.61428 5.28116 4.11438 4.78106C4.61448 4.28097 5.29276 4.00002 6 4.00002C6.70724 4.00002 7.38552 4.28097 7.88562 4.78106C8.38571 5.28116 8.66667 5.95944 8.66667 6.66668C8.66667 7.37393 8.38571 8.0522 7.88562 8.5523C7.38552 9.0524 6.70724 9.33335 6 9.33335C5.29276 9.33335 4.61448 9.0524 4.11438 8.5523C3.61428 8.0522 3.33333 7.37393 3.33333 6.66668Z" fill="black"/>
+                  </svg>
+                  <span class="fs-9">阿倍野 HARUKAS 300 海闊天空展望台</span>
+                </div>
+                <ul class="fs-8 text-neutral-80 mb-6">
+                  <li>登上日本最高摩天大樓，從 300 公尺高空飽覽大阪全景，日夜皆美、四季皆宜。</li>
+                  <li>58 樓設有空中庭園與 Sky Garden 餐廳，在都市高處也能享受放鬆綠意與美食饗宴。</li>
+                  <li>60 樓空中迴廊以全景設計打造，無論白天或黃昏，都能盡覽大阪市區與天際線。</li>
+                  <li>園區內集結多間熱門品牌與伴手禮店，提供現場退稅服務，讓你購物更便利。</li>
+                </ul>
+                <a href="#" class="d-flex align-items-center text-decoration-none text-black">查看更多<span class="material-symbols-outlined ms-2">chevron_right</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-flex flex-column justify-content-between bg-white border border-1 rounded-6 p-6 h-100">
+              <div>
+                <span class="d-inline-block bg-alert-10 fs-9 fw-semibold text-alert-100 rounded-3 py-2 px-3 mb-4">限定優惠 75 折</span>
+                <p class="fs-3 fw-bold mb-1">NT$ 415</p>
+                <p class="fw-normal text-neutral-60 mb-0"><del>NT$ 520</del></p>
+              </div>
+              <button class="btn btn-primary py-4 rounded-4 fw-semibold w-100" type="button">選擇方案</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--選擇方案-->
+    <div class="bg-primary-10 py-14">
+      <div class="container">
+        <h2 class="d-flex align-items-center text-primary fs-3 fw-bold mb-6">
+          <svg width="24" height="24" viewBox="0 0 18 16" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.227 6.29189L13.5135 9.62162H16.2595V12.3243H12.9297L12.1514 16H9.27568L10.0541 12.3243H6.11892L5.34054 16H2.48649L3.26486 12.3243H0V9.62162H3.84865L4.56216 6.29189H1.31892V3.58919H5.14595L5.9027 0H8.75676L8 3.58919H11.9351L12.6919 0H15.5676L14.8108 3.58919H17.5784V6.29189H14.227ZM11.3514 6.29189H7.41622L6.7027 9.62162H10.6378L11.3514 6.29189Z" fill="#4A3830"/>
+          </svg>
+          選擇方案
+        </h2>
+        <!--選擇方案-->
+        <div class="card rounded-20 mb-6">
+          <div class="card-header bg-primary text-white fs-6 fw-bold rounded-top-20 p-6 position-relative">
+            <svg width="72" height="48" viewBox="0 0 72 48" fill="none" class="position-absolute top-0 start-0" xmlns="http://www.w3.org/2000/svg">
+            <path d="M37.2383 48L49.0508 -24H60.3008L48.4883 48H37.2383ZM5 30.1406L6.86328 18.8906H63.1133L61.25 30.1406H5ZM11.9258 48L23.7383 -24H34.9883L23.1758 48H11.9258ZM9.11328 5.10938L11.0117 -6.14062H67.2617L65.3633 5.10938H9.11328Z" fill="#F3EEEC" fill-opacity="0.2"/>
+            </svg>
+            熱門選擇
+          </div>
+          <div class="card-body p-6">
+            <div class="d-flex justify-content-between border-bottom pb-8 mb-8">
+              <div class="d-flex">
+                <img src="/homeworkWeek8/assets/harukas-2-BKk2DKuS.png" class="img-fluid rounded-5 product-img me-4" alt="harukas-2">
+                <div>
+                  <h3 class="fs-6 fw-bold mb-4">海闊天空展望台門票</h3>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">立即確認</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">有效期：60 天</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">出示憑證入場</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">兌換前可免費取消</div>
+                  <ul class="text-neutral-80 fs-9 mt-7 mb-0">
+                    <li>阿倍野展望台門票僅限使用一次，退場後無法再次入場。</li>
+                    <li>出發前請再次確認設施是否正常營業，請參考官網。如遇臨時休館，恕不另行通知。 </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="d-flex flex-column me-6">
+                  <span class="fs-5 fw-bold">NT$ 415</span>
+                  <span class="text-neutral-60"><del>NT$ 520</del></span>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-white border border-1 border-primary h-auto flex-shrink-0">取消選擇</button>
+                </div>
+              </div>
+            </div>
+            <!--方案詳情-->
+            <div class="mb-8">
+              <h3 class="fs-6 mb-6">方案詳情</h3>
+              <div class="border rounded-5 overflow-hidden mb-8">
+                <table class="table table-neutral-10 mb-0">
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="w-20 p-4">關於此方案</th>
+                      <td class="d-flex align-items-center p-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C16.9707 21 21 16.9707 21 12C21 7.0293 16.9707 3 12 3C7.0293 3 3 7.0293 3 12C3 16.9707 7.0293 21 12 21Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 8.76923C14.315 8.13692 13.109 7.69754 12 7.66985M12 7.66985C10.68 7.63662 9.5 8.18769 9.5 9.69231C9.5 12.4615 15 11.0769 15 13.8462C15 15.4255 13.536 16.104 12 16.0532M12 7.66985V6M9 14.7692C9.644 15.5631 10.843 16.0154 12 16.0532M12 16.0532V18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        免費取消！
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-4">費用包含</th>
+                      <td class="d-flex align-items-center p-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#7CD31F" stroke-width="2"/>
+                        <path d="M8.40039 12.45L11.1004 15.15L15.6004 9.75" stroke="#7CD31F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        阿倍野展望台門票 HARUKAS 300
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-4">費用不包含</th>
+                      <td class="p-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#909090" stroke-width="2"/>
+                        <path d="M14.8281 9.17163L9.17127 14.8285" stroke="#909090" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M14.8281 14.8284L9.17127 9.17151" stroke="#909090" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        個人消費
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="ms-7 me-2" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#909090" stroke-width="2"/>
+                        <path d="M14.8281 9.17163L9.17127 14.8285" stroke="#909090" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M14.8281 14.8284L9.17127 9.17151" stroke="#909090" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        以上未提及消費
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-4">取消政策</th>
+                      <td class="d-flex align-items-center p-4">
+                        由於站內商品來自全球各地，訂單取消時間將依該供應商所在時區判定。供應商需 2-5 個工作天進行取消流程，依照您購買的商品取消政策收取手續費，並於取消流程完成後14 個工作天內退款。
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="p-4">憑證兌換期限</th>
+                      <td class="d-flex align-items-center p-4">
+                        自開票日算起 60日 之內兌換有效，逾期無效
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!--選擇日期及選項-->
+            <div class="d-flex justify-content-between border-bottom pb-8 mb-8">
+              <div class="w-50 me-12">
+                <h3 class="fs-6 mb-6">選擇日期及選項</h3>
+                <div class="card border-neutral-40 rounded-5">
+                  <div class="card-header d-flex align-items-center bg-white border-neutral-40 fs-6 fw-bold rounded-top-5 py-5 px-4">
+                    2025 年 5 月
+                    <div class="ms-auto">
+                      <button type="button" class="bg-white border-0 p-0"><span class="d-block text-neutral-60 material-symbols-outlined p-2">chevron_backward</span></button>
+                      <button type="button" class="bg-white border-0 p-0"><span class="d-block material-symbols-outlined p-2">chevron_right</span></button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-borderless">
+                      <tbody class="text-center">
+                        <tr>
+                          <td class="text-neutral-80">日</td>
+                          <td class="text-neutral-80">一</td>
+                          <td class="text-neutral-80">二</td>
+                          <td class="text-neutral-80">三</td>
+                          <td class="text-neutral-80">四</td>
+                          <td class="text-neutral-80">五</td>
+                          <td class="text-neutral-80">六</td>
+                        </tr>
+                        <tr>
+                          <td colspan="4"></td>
+                          <td class="text-neutral-60 text-decoration-line-through">1</td>
+                          <td class="text-neutral-60 text-decoration-line-through">2</td>
+                          <td class="text-neutral-60 text-decoration-line-through">3</td>
+                        </tr>
+                        <tr>
+                          <td class="text-neutral-60 text-decoration-line-through">4</td>
+                          <td class="text-neutral-60 text-decoration-line-through">5</td>
+                          <td class="text-neutral-60 text-decoration-line-through">6</td>
+                          <td class="text-neutral-60 text-decoration-line-through">7</td>
+                          <td class="fw-bold">8</td>
+                          <td class="text-neutral-60 text-decoration-line-through">9</td>
+                          <td class="text-neutral-60 text-decoration-line-through">10</td>
+                        </tr>
+                        <tr>
+                          <td class="text-neutral-60 text-decoration-line-through">11</td>
+                          <td class="fw-bold">12</td>
+                          <td class="fw-bold">13</td>
+                          <td class="text-neutral-60 text-decoration-line-through">14</td>
+                          <td class="fw-bold">15</td>
+                          <td class="text-neutral-60 text-decoration-line-through">16</td>
+                          <td class="text-neutral-60 text-decoration-line-through">17</td>
+                        </tr>
+                        <tr>
+                          <td class="text-neutral-60 text-decoration-line-through">18</td>
+                          <td class="text-neutral-60 text-decoration-line-through">19</td>
+                          <td class="fw-bold">20</td>
+                          <td class="fw-bold bg-primary-10 rounded-3">21</td>
+                          <td class="text-neutral-60 text-decoration-line-through">22</td>
+                          <td class="text-neutral-60 text-decoration-line-through">23</td>
+                          <td class="text-neutral-60 text-decoration-line-through">24</td>
+                        </tr>
+                        <tr>
+                          <td class="text-neutral-60 text-decoration-line-through">25</td>
+                          <td class="text-neutral-60 text-decoration-line-through">26</td>
+                          <td class="text-neutral-60 text-decoration-line-through">27</td>
+                          <td class="text-neutral-60 text-decoration-line-through">28</td>
+                          <td class="text-neutral-60 text-decoration-line-through">29</td>
+                          <td class="text-neutral-60 text-decoration-line-through">30</td>
+                          <td class="text-neutral-60 text-decoration-line-through">31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div> 
+              </div>
+              <!--選擇數量-->
+              <div class="w-50">
+                <h3 class="fs-6 mb-6">選擇日期及選項</h3>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <span class="text-neutral-80 me-2">每張</span>
+                    <span class="fs-6 fw-bold">NT$ 415</span>
+                  </div>
+                  <div class="d-inline-flex align-items-center">
+                    <button type="button" class="d-inline-block bg-white border border-1 rounded-circle p-3">
+                      <span class="d-block material-symbols-outlined">check_indeterminate_small</span>
+                    </button>
+                    <span class="fs-6 fw-bold p-4">2</span>
+                    <button type="button" class="d-inline-block bg-white border border-1 rounded-circle p-3">
+                      <span class="d-block material-symbols-outlined">add</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--按鈕 -->
+            <div class="d-flex justify-content-end ">
+              <div class="d-flex flex-column text-end me-6">
+                <span class="text-neutral-80">總金額</span>
+                <span class="fs-5 fw-bold">NT$ 830</span>
+              </div>
+              <button class="btn btn-primary-60 text-white px-7 py-4 rounded-4 fw-semibold me-2" type="button">加入購物車</button>
+              <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold" type="button">立即訂購</button>
+            </div>
+          </div>
+        </div>
+        <!--套裝行程-->
+        <div class="card rounded-20 mb-6 ">
+          <div class="card-header bg-primary-60 text-white fs-6 fw-bold rounded-top-20 p-6 position-relative">
+            <svg width="72" height="48" viewBox="0 0 72 48" fill="none" class="position-absolute top-0 start-0" xmlns="http://www.w3.org/2000/svg">
+            <path d="M37.2383 48L49.0508 -24H60.3008L48.4883 48H37.2383ZM5 30.1406L6.86328 18.8906H63.1133L61.25 30.1406H5ZM11.9258 48L23.7383 -24H34.9883L23.1758 48H11.9258ZM9.11328 5.10938L11.0117 -6.14062H67.2617L65.3633 5.10938H9.11328Z" fill="#F3EEEC" fill-opacity="0.2"/>
+            </svg>
+            套裝行程
+          </div>
+          <div class="card-body p-6">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <img src="/homeworkWeek8/assets/site-1-d02buf-p.png" class="img-fluid rounded-5 product-img me-4" alt="site-1">
+                <div class="w-65">
+                  <h3 class="fs-6 fw-bold mb-4">【超值優惠】阿倍野展望台門票 HARUKAS 300 + HARUKA 關西機場→天王寺（單程票）</h3>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">立即確認</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">有效期：60 天</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">出示憑證入場</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">兌換前可免費取消</div>
+                  <ul class="text-neutral-80 fs-9 mt-7 mb-0">
+                    <li>HARUKA 關西機場→天王寺（單程票）相關訊息，請參考日本關西機場 KIX 機場快線 HARUKA 車票。</li>
+                    <li>阿倍野展望台門票僅限使用一次，退場後無法再次入場。</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="d-flex flex-column me-6">
+                  <span class="fs-5 fw-bold text-nowrap">NT$ 522</span>
+                  <span class="text-neutral-60"><del>NT$ 630</del></span>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-white border border-1 border-primary h-auto flex-shrink-0 text-nowrap">選擇</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card rounded-20">
+          <div class="card-body p-6">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <img src="/homeworkWeek8/assets/site-2-DpVylpzv.png" class="img-fluid rounded-5 product-img me-4" alt="site-2">
+                <div class="w-65">
+                  <h3 class="fs-6 fw-bold mb-4">阿倍野展望台門票 HARUKAS 300｜附章魚燒兌換劵</h3>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">立即確認</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">有效期：60 天</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">出示憑證入場</div>
+                  <div class="d-inline-block bg-neutral-40 text-neutral-80 fs-9 rounded-3 py-1 px-2">兌換前可免費取消</div>
+                  <ul class="text-neutral-80 fs-9 mt-7 mb-0">
+                    <li>請於使用當天前往阿倍野HARUKAS300展望台16樓服務台出示QRcodode掃碼領取展望台入場劵及章魚燒兌換劵。</li>
+                    <li>58樓餐廳不開放預訂座位及選位，使用當天有可能因用餐人數眾多而沒有位置，敬請見諒。</li>
+                    <li>工作人員會隨機選章魚燒提供給客人。無法自由選擇。敬請見諒。</li>
+                    <li>章魚燒請於指定出發日當天兌換，逾期無效。</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="d-flex flex-column me-6">
+                  <span class="fs-5 fw-bold text-nowrap">NT$ 478</span>
+                  <span class="text-neutral-60"><del>NT$ 630</del></span>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-white border border-1 border-primary h-auto flex-shrink-0 text-nowrap">選擇</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--商品說明-->
+    <div class="bg-neutral-10">
+      <div class="container py-14">
+        <div class="row">
+          <div class="col-10">
+            <h2 class="d-flex align-items-center text-primary fs-3 fw-bold mb-6" id="explanation">
+              <svg width="24" height="24" viewBox="0 0 18 16" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.227 6.29189L13.5135 9.62162H16.2595V12.3243H12.9297L12.1514 16H9.27568L10.0541 12.3243H6.11892L5.34054 16H2.48649L3.26486 12.3243H0V9.62162H3.84865L4.56216 6.29189H1.31892V3.58919H5.14595L5.9027 0H8.75676L8 3.58919H11.9351L12.6919 0H15.5676L14.8108 3.58919H17.5784V6.29189H14.227ZM11.3514 6.29189H7.41622L6.7027 9.62162H10.6378L11.3514 6.29189Z" fill="#4A3830"/>
+              </svg>
+              商品說明
+            </h2>
+            <div class="text-neutral-80 mb-12">
+              <p class="mb-0">
+                － 景點介紹 －
+              </p>
+              <ul class="mb-6">
+                <li>
+                  阿倍野 HARUKAS 阿倍野 HARUKAS 是 2014 年 3 月 7 日正式開幕的大阪必去新地標，集結了商城、飯店、美術館與展望台等多元功能，欣賞美景之餘還可購物、享受美食。阿倍野 60 樓 360 度的空中迴廊，以落地鋼化玻璃包圍展望台四周，若天候條件較佳，還可將京都到六甲山脈、明石海峽大橋到淡路島、生駒山脈，以及關西國際機場等廣大景色一覽無遺。此外，特別推薦夜晚限定的燈光音樂秀，當燈光與音樂在夜晚的空中庭園與空中走廊之間交錯，絕對是一場難得的感官饗宴！
+                </li>
+              </ul>
+              <p class="mb-0">
+                － 阿倍野美術館 展覽介紹 －
+              </p>
+              <ul class="mb-6">
+                <li class="text-decoration-underline">幻想旅行導遊：尚-米歇爾·福隆</li>
+                <li>展覽期間：2025年4月5日（六）～2025年6月22日（日）</li>
+                <li>尚-米歇爾·福隆（Jean-Michel Folon，1934-2005）是一位來自比利時的獨特藝術家。他的作品既詩意盎然又充滿幽默感，透過柔和的色彩與輕盈的筆觸，帶領觀眾踏上一場奇幻之旅，並傳遞對這個世界各種現象的深刻啟發，充滿豐富的情感與訊息。 為了紀念福隆逝世20週年，以及他生前創立的「福隆基金會」成立25週年，本次展覽將展出約230件多樣的作品，包括繪畫、雕塑、海報等，向大家展現福隆溫暖且深邃的藝術魅力。</li>
+              </ul>
+              <p class="mb-6">
+                從 60 樓的觀景樓層，俯瞰 360 度充滿活力的大阪
+              </p>
+              <div class="position-relative d-inline-block">
+                <img src="/homeworkWeek8/assets/harukas-4-CRZUAluf.png" class="img-fluid rounded-20" alt="harukas-4">
+                <div class="gradient-box"></div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary px-13 py-4 rounded-4 fw-semibold" type="submit">展開更多</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 text-end">
+            <ul class="list-unstyled text-neutral-60">
+              <li class="mb-6"><a href="#explanation" class="text-decoration-none  text-left-hover">商品說明</a></li>
+              <li class="mb-6"><a href="#use" class="text-decoration-none  text-left-hover">如何使用</a></li>
+              <li class="mb-6"><a href="#comment" class="text-decoration-none  text-left-hover">旅人評論</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--如何使用-->
+        <div class="border-bottom pb-8 mb-8">
+          <h2 class="d-flex align-items-center text-primary fs-3 fw-bold mb-6" id="use">
+            <svg width="24" height="24" viewBox="0 0 18 16" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.227 6.29189L13.5135 9.62162H16.2595V12.3243H12.9297L12.1514 16H9.27568L10.0541 12.3243H6.11892L5.34054 16H2.48649L3.26486 12.3243H0V9.62162H3.84865L4.56216 6.29189H1.31892V3.58919H5.14595L5.9027 0H8.75676L8 3.58919H11.9351L12.6919 0H15.5676L14.8108 3.58919H17.5784V6.29189H14.227ZM11.3514 6.29189H7.41622L6.7027 9.62162H10.6378L11.3514 6.29189Z" fill="#4A3830"/>
+            </svg>
+            如何使用
+          </h2>
+          <p class="fw-bold mb-2">憑證使用方式</p>
+          <p class="text-neutral-80 mb-0">現場請出示 QR code</p>
+          <p class="text-neutral-80 mb-0">請至阿倍野 HARUKAS 300 展望台 16 樓櫃檯出示電子憑證。</p>
+        </div>
+        <!--旅人評論-->
+        <div>
+          <h2 class="d-flex align-items-center text-primary fs-3 fw-bold mb-6" id="comment">
+            <svg width="24" height="24" viewBox="0 0 18 16" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.227 6.29189L13.5135 9.62162H16.2595V12.3243H12.9297L12.1514 16H9.27568L10.0541 12.3243H6.11892L5.34054 16H2.48649L3.26486 12.3243H0V9.62162H3.84865L4.56216 6.29189H1.31892V3.58919H5.14595L5.9027 0H8.75676L8 3.58919H11.9351L12.6919 0H15.5676L14.8108 3.58919H17.5784V6.29189H14.227ZM11.3514 6.29189H7.41622L6.7027 9.62162H10.6378L11.3514 6.29189Z" fill="#4A3830"/>
+            </svg>
+            旅人評論 
+          </h2>
+          <div class="d-flex bg-white rounded-20 p-7 shadow-sm mb-6">
+            <img src="/homeworkWeek8/assets/avatar-1-B6sks8L0.png" class="img-fluid wh-60 me-6" alt="avatar-1">
+            <div class="w-100">
+              <div class="mb-4">
+                <p class="mb-1">無聊工程師 Brian</p>
+                <svg width="96" height="17" viewBox="0 0 96 17" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99924 12.5484L3.64924 14.7904C3.61631 14.8074 3.57932 14.8149 3.54238 14.812C3.50545 14.8092 3.47002 14.7962 3.44006 14.7744C3.41009 14.7526 3.38676 14.723 3.37267 14.6887C3.35857 14.6544 3.35427 14.617 3.36024 14.5804L4.15024 9.75039L0.672236 6.30839C0.645398 6.28264 0.626357 6.24985 0.617295 6.21377C0.608232 6.1777 0.609515 6.1398 0.620995 6.10442C0.632475 6.06904 0.653689 6.03761 0.682206 6.01373C0.710723 5.98985 0.74539 5.97448 0.782236 5.96939L5.61924 5.22639L7.81924 0.856392C7.83582 0.823111 7.86136 0.795113 7.89298 0.775543C7.9246 0.755973 7.96105 0.745605 7.99824 0.745605C8.03542 0.745605 8.07187 0.755973 8.10349 0.775543C8.13511 0.795113 8.16065 0.823111 8.17724 0.856392L10.3772 5.22639L15.2142 5.96939C15.2509 5.97484 15.2853 5.9904 15.3135 6.01432C15.3418 6.03824 15.3628 6.06958 15.3743 6.10481C15.3857 6.14004 15.3871 6.17776 15.3782 6.21372C15.3694 6.24969 15.3507 6.28248 15.3242 6.30839L11.8492 9.75139L12.6372 14.5814C12.643 14.6179 12.6385 14.6552 12.6243 14.6893C12.6101 14.7234 12.5868 14.7529 12.5569 14.7746C12.5269 14.7962 12.4916 14.8092 12.4548 14.8119C12.418 14.8147 12.3811 14.8073 12.3482 14.7904L7.99924 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.9992 12.5484L23.6492 14.7904C23.6163 14.8074 23.5793 14.8149 23.5424 14.812C23.5054 14.8092 23.47 14.7962 23.4401 14.7744C23.4101 14.7526 23.3868 14.723 23.3727 14.6887C23.3586 14.6544 23.3543 14.617 23.3602 14.5804L24.1502 9.75039L20.6722 6.30839C20.6454 6.28264 20.6264 6.24985 20.6173 6.21377C20.6082 6.1777 20.6095 6.1398 20.621 6.10442C20.6325 6.06904 20.6537 6.03761 20.6822 6.01373C20.7107 5.98985 20.7454 5.97448 20.7822 5.96939L25.6192 5.22639L27.8192 0.856392C27.8358 0.823111 27.8614 0.795113 27.893 0.775543C27.9246 0.755973 27.961 0.745605 27.9982 0.745605C28.0354 0.745605 28.0719 0.755973 28.1035 0.775543C28.1351 0.795113 28.1606 0.823111 28.1772 0.856392L30.3772 5.22639L35.2142 5.96939C35.2509 5.97484 35.2853 5.9904 35.3135 6.01432C35.3418 6.03824 35.3628 6.06958 35.3743 6.10481C35.3857 6.14004 35.3871 6.17776 35.3782 6.21372C35.3694 6.24969 35.3507 6.28248 35.3242 6.30839L31.8492 9.75139L32.6372 14.5814C32.643 14.6179 32.6385 14.6552 32.6243 14.6893C32.6101 14.7234 32.5868 14.7529 32.5569 14.7746C32.5269 14.7962 32.4916 14.8092 32.4548 14.8119C32.418 14.8147 32.3811 14.8073 32.3482 14.7904L27.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M47.9992 12.5484L43.6492 14.7904C43.6163 14.8074 43.5793 14.8149 43.5424 14.812C43.5054 14.8092 43.47 14.7962 43.4401 14.7744C43.4101 14.7526 43.3868 14.723 43.3727 14.6887C43.3586 14.6544 43.3543 14.617 43.3602 14.5804L44.1502 9.75039L40.6722 6.30839C40.6454 6.28264 40.6264 6.24985 40.6173 6.21377C40.6082 6.1777 40.6095 6.1398 40.621 6.10442C40.6325 6.06904 40.6537 6.03761 40.6822 6.01373C40.7107 5.98985 40.7454 5.97448 40.7822 5.96939L45.6192 5.22639L47.8192 0.856392C47.8358 0.823111 47.8614 0.795113 47.893 0.775543C47.9246 0.755973 47.961 0.745605 47.9982 0.745605C48.0354 0.745605 48.0719 0.755973 48.1035 0.775543C48.1351 0.795113 48.1606 0.823111 48.1772 0.856392L50.3772 5.22639L55.2142 5.96939C55.2509 5.97484 55.2853 5.9904 55.3135 6.01432C55.3418 6.03824 55.3628 6.06958 55.3743 6.10481C55.3857 6.14004 55.3871 6.17776 55.3782 6.21372C55.3694 6.24969 55.3507 6.28248 55.3242 6.30839L51.8492 9.75139L52.6372 14.5814C52.643 14.6179 52.6385 14.6552 52.6243 14.6893C52.6101 14.7234 52.5868 14.7529 52.5569 14.7746C52.5269 14.7962 52.4916 14.8092 52.4548 14.8119C52.418 14.8147 52.3811 14.8073 52.3482 14.7904L47.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M67.9992 12.5484L63.6492 14.7904C63.6163 14.8074 63.5793 14.8149 63.5424 14.812C63.5054 14.8092 63.47 14.7962 63.4401 14.7744C63.4101 14.7526 63.3868 14.723 63.3727 14.6887C63.3586 14.6544 63.3543 14.617 63.3602 14.5804L64.1502 9.75039L60.6722 6.30839C60.6454 6.28264 60.6264 6.24985 60.6173 6.21377C60.6082 6.1777 60.6095 6.1398 60.621 6.10442C60.6325 6.06904 60.6537 6.03761 60.6822 6.01373C60.7107 5.98985 60.7454 5.97448 60.7822 5.96939L65.6192 5.22639L67.8192 0.856392C67.8358 0.823111 67.8614 0.795113 67.893 0.775543C67.9246 0.755973 67.961 0.745605 67.9982 0.745605C68.0354 0.745605 68.0719 0.755973 68.1035 0.775543C68.1351 0.795113 68.1606 0.823111 68.1772 0.856392L70.3772 5.22639L75.2142 5.96939C75.2509 5.97484 75.2853 5.9904 75.3135 6.01432C75.3418 6.03824 75.3628 6.06958 75.3743 6.10481C75.3857 6.14004 75.3871 6.17776 75.3782 6.21372C75.3694 6.24969 75.3507 6.28248 75.3242 6.30839L71.8492 9.75139L72.6372 14.5814C72.643 14.6179 72.6385 14.6552 72.6243 14.6893C72.6101 14.7234 72.5868 14.7529 72.5569 14.7746C72.5269 14.7962 72.4916 14.8092 72.4548 14.8119C72.418 14.8147 72.3811 14.8073 72.3482 14.7904L67.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M87.9992 12.5484L83.6492 14.7904C83.6163 14.8074 83.5793 14.8149 83.5424 14.812C83.5054 14.8092 83.47 14.7962 83.4401 14.7744C83.4101 14.7526 83.3868 14.723 83.3727 14.6887C83.3586 14.6544 83.3543 14.617 83.3602 14.5804L84.1502 9.75039L80.6722 6.30839C80.6454 6.28264 80.6264 6.24985 80.6173 6.21377C80.6082 6.1777 80.6095 6.1398 80.621 6.10442C80.6325 6.06904 80.6537 6.03761 80.6822 6.01373C80.7107 5.98985 80.7454 5.97448 80.7822 5.96939L85.6192 5.22639L87.8192 0.856392C87.8358 0.823111 87.8614 0.795113 87.893 0.775543C87.9246 0.755973 87.961 0.745605 87.9982 0.745605C88.0354 0.745605 88.0719 0.755973 88.1035 0.775543C88.1351 0.795113 88.1606 0.823111 88.1772 0.856392L90.3772 5.22639L95.2142 5.96939C95.2509 5.97484 95.2853 5.9904 95.3135 6.01432C95.3418 6.03824 95.3628 6.06958 95.3743 6.10481C95.3857 6.14004 95.3871 6.17776 95.3782 6.21372C95.3694 6.24969 95.3507 6.28248 95.3242 6.30839L91.8492 9.75139L92.6372 14.5814C92.643 14.6179 92.6385 14.6552 92.6243 14.6893C92.6101 14.7234 92.5868 14.7529 92.5569 14.7746C92.5269 14.7962 92.4916 14.8092 92.4548 14.8119C92.418 14.8147 92.3811 14.8073 92.3482 14.7904L87.9992 12.5484Z" fill="#A37F71"/>
+                </svg>
+                <span class="fs-9 text-neutral-80">2025-03-24</span>
+              </div>
+              <div class="bg-neutral-10 rounded-5 p-4">
+                <p class="fw-semibold mb-3">覺得自己像在當鋼鐵人</p>
+                <p class="text-neutral-80 mb-0">本來只是想吹吹冷氣看風景，結果一站上去我竟然以為自己是要起飛的鋼鐵人。</p>
+                <p class="text-neutral-80 mb-0">全大阪通通收服底，還順便看到前女友住在哪一層，讚。</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex bg-white rounded-20 p-7 shadow-sm mb-6">
+            <img src="/homeworkWeek8/assets/avatar-2-DXJnUBbb.png" class="img-fluid wh-60 me-6" alt="avatar-2">
+            <div class="w-100">
+              <div class="mb-4">
+                <p class="mb-1">愛旅遊的林阿姨</p>
+                <svg width="96" height="17" viewBox="0 0 96 17" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99924 12.5484L3.64924 14.7904C3.61631 14.8074 3.57932 14.8149 3.54238 14.812C3.50545 14.8092 3.47002 14.7962 3.44006 14.7744C3.41009 14.7526 3.38676 14.723 3.37267 14.6887C3.35857 14.6544 3.35427 14.617 3.36024 14.5804L4.15024 9.75039L0.672236 6.30839C0.645398 6.28264 0.626357 6.24985 0.617295 6.21377C0.608232 6.1777 0.609515 6.1398 0.620995 6.10442C0.632475 6.06904 0.653689 6.03761 0.682206 6.01373C0.710723 5.98985 0.74539 5.97448 0.782236 5.96939L5.61924 5.22639L7.81924 0.856392C7.83582 0.823111 7.86136 0.795113 7.89298 0.775543C7.9246 0.755973 7.96105 0.745605 7.99824 0.745605C8.03542 0.745605 8.07187 0.755973 8.10349 0.775543C8.13511 0.795113 8.16065 0.823111 8.17724 0.856392L10.3772 5.22639L15.2142 5.96939C15.2509 5.97484 15.2853 5.9904 15.3135 6.01432C15.3418 6.03824 15.3628 6.06958 15.3743 6.10481C15.3857 6.14004 15.3871 6.17776 15.3782 6.21372C15.3694 6.24969 15.3507 6.28248 15.3242 6.30839L11.8492 9.75139L12.6372 14.5814C12.643 14.6179 12.6385 14.6552 12.6243 14.6893C12.6101 14.7234 12.5868 14.7529 12.5569 14.7746C12.5269 14.7962 12.4916 14.8092 12.4548 14.8119C12.418 14.8147 12.3811 14.8073 12.3482 14.7904L7.99924 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.9992 12.5484L23.6492 14.7904C23.6163 14.8074 23.5793 14.8149 23.5424 14.812C23.5054 14.8092 23.47 14.7962 23.4401 14.7744C23.4101 14.7526 23.3868 14.723 23.3727 14.6887C23.3586 14.6544 23.3543 14.617 23.3602 14.5804L24.1502 9.75039L20.6722 6.30839C20.6454 6.28264 20.6264 6.24985 20.6173 6.21377C20.6082 6.1777 20.6095 6.1398 20.621 6.10442C20.6325 6.06904 20.6537 6.03761 20.6822 6.01373C20.7107 5.98985 20.7454 5.97448 20.7822 5.96939L25.6192 5.22639L27.8192 0.856392C27.8358 0.823111 27.8614 0.795113 27.893 0.775543C27.9246 0.755973 27.961 0.745605 27.9982 0.745605C28.0354 0.745605 28.0719 0.755973 28.1035 0.775543C28.1351 0.795113 28.1606 0.823111 28.1772 0.856392L30.3772 5.22639L35.2142 5.96939C35.2509 5.97484 35.2853 5.9904 35.3135 6.01432C35.3418 6.03824 35.3628 6.06958 35.3743 6.10481C35.3857 6.14004 35.3871 6.17776 35.3782 6.21372C35.3694 6.24969 35.3507 6.28248 35.3242 6.30839L31.8492 9.75139L32.6372 14.5814C32.643 14.6179 32.6385 14.6552 32.6243 14.6893C32.6101 14.7234 32.5868 14.7529 32.5569 14.7746C32.5269 14.7962 32.4916 14.8092 32.4548 14.8119C32.418 14.8147 32.3811 14.8073 32.3482 14.7904L27.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M47.9992 12.5484L43.6492 14.7904C43.6163 14.8074 43.5793 14.8149 43.5424 14.812C43.5054 14.8092 43.47 14.7962 43.4401 14.7744C43.4101 14.7526 43.3868 14.723 43.3727 14.6887C43.3586 14.6544 43.3543 14.617 43.3602 14.5804L44.1502 9.75039L40.6722 6.30839C40.6454 6.28264 40.6264 6.24985 40.6173 6.21377C40.6082 6.1777 40.6095 6.1398 40.621 6.10442C40.6325 6.06904 40.6537 6.03761 40.6822 6.01373C40.7107 5.98985 40.7454 5.97448 40.7822 5.96939L45.6192 5.22639L47.8192 0.856392C47.8358 0.823111 47.8614 0.795113 47.893 0.775543C47.9246 0.755973 47.961 0.745605 47.9982 0.745605C48.0354 0.745605 48.0719 0.755973 48.1035 0.775543C48.1351 0.795113 48.1606 0.823111 48.1772 0.856392L50.3772 5.22639L55.2142 5.96939C55.2509 5.97484 55.2853 5.9904 55.3135 6.01432C55.3418 6.03824 55.3628 6.06958 55.3743 6.10481C55.3857 6.14004 55.3871 6.17776 55.3782 6.21372C55.3694 6.24969 55.3507 6.28248 55.3242 6.30839L51.8492 9.75139L52.6372 14.5814C52.643 14.6179 52.6385 14.6552 52.6243 14.6893C52.6101 14.7234 52.5868 14.7529 52.5569 14.7746C52.5269 14.7962 52.4916 14.8092 52.4548 14.8119C52.418 14.8147 52.3811 14.8073 52.3482 14.7904L47.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M67.9992 12.5484L63.6492 14.7904C63.6163 14.8074 63.5793 14.8149 63.5424 14.812C63.5054 14.8092 63.47 14.7962 63.4401 14.7744C63.4101 14.7526 63.3868 14.723 63.3727 14.6887C63.3586 14.6544 63.3543 14.617 63.3602 14.5804L64.1502 9.75039L60.6722 6.30839C60.6454 6.28264 60.6264 6.24985 60.6173 6.21377C60.6082 6.1777 60.6095 6.1398 60.621 6.10442C60.6325 6.06904 60.6537 6.03761 60.6822 6.01373C60.7107 5.98985 60.7454 5.97448 60.7822 5.96939L65.6192 5.22639L67.8192 0.856392C67.8358 0.823111 67.8614 0.795113 67.893 0.775543C67.9246 0.755973 67.961 0.745605 67.9982 0.745605C68.0354 0.745605 68.0719 0.755973 68.1035 0.775543C68.1351 0.795113 68.1606 0.823111 68.1772 0.856392L70.3772 5.22639L75.2142 5.96939C75.2509 5.97484 75.2853 5.9904 75.3135 6.01432C75.3418 6.03824 75.3628 6.06958 75.3743 6.10481C75.3857 6.14004 75.3871 6.17776 75.3782 6.21372C75.3694 6.24969 75.3507 6.28248 75.3242 6.30839L71.8492 9.75139L72.6372 14.5814C72.643 14.6179 72.6385 14.6552 72.6243 14.6893C72.6101 14.7234 72.5868 14.7529 72.5569 14.7746C72.5269 14.7962 72.4916 14.8092 72.4548 14.8119C72.418 14.8147 72.3811 14.8073 72.3482 14.7904L67.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M87.9992 12.5484L83.6492 14.7904C83.6163 14.8074 83.5793 14.8149 83.5424 14.812C83.5054 14.8092 83.47 14.7962 83.4401 14.7744C83.4101 14.7526 83.3868 14.723 83.3727 14.6887C83.3586 14.6544 83.3543 14.617 83.3602 14.5804L84.1502 9.75039L80.6722 6.30839C80.6454 6.28264 80.6264 6.24985 80.6173 6.21377C80.6082 6.1777 80.6095 6.1398 80.621 6.10442C80.6325 6.06904 80.6537 6.03761 80.6822 6.01373C80.7107 5.98985 80.7454 5.97448 80.7822 5.96939L85.6192 5.22639L87.8192 0.856392C87.8358 0.823111 87.8614 0.795113 87.893 0.775543C87.9246 0.755973 87.961 0.745605 87.9982 0.745605C88.0354 0.745605 88.0719 0.755973 88.1035 0.775543C88.1351 0.795113 88.1606 0.823111 88.1772 0.856392L90.3772 5.22639L95.2142 5.96939C95.2509 5.97484 95.2853 5.9904 95.3135 6.01432C95.3418 6.03824 95.3628 6.06958 95.3743 6.10481C95.3857 6.14004 95.3871 6.17776 95.3782 6.21372C95.3694 6.24969 95.3507 6.28248 95.3242 6.30839L91.8492 9.75139L92.6372 14.5814C92.643 14.6179 92.6385 14.6552 92.6243 14.6893C92.6101 14.7234 92.5868 14.7529 92.5569 14.7746C92.5269 14.7962 92.4916 14.8092 92.4548 14.8119C92.418 14.8147 92.3811 14.8073 92.3482 14.7904L87.9992 12.5484Z" fill="#A37F71"/>
+                </svg>
+                <span class="fs-9 text-neutral-80">2025-01-30</span>
+              </div>
+              <div class="bg-neutral-10 rounded-5 p-4">
+                <p class="fw-semibold mb-3">退休生活安排得剛剛好</p>
+                <p class="text-neutral-80 mb-0">以前只有年輕人在打卡，這次我也來插旗！</p>
+                <p class="text-neutral-80 mb-0">從 58 樓看風景、60 樓走一圈，還順便在 Sky Garden 吃個甜點，人生沒這麼輕鬆啦！</p>
+                <p class="text-neutral-80 mb-0">還有退稅服務耶～貼心！</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex bg-white rounded-20 p-7 shadow-sm mb-6">
+            <img src="/homeworkWeek8/assets/avatar-3-D_MSl128.png" class="img-fluid wh-60 me-6" alt="avatar-3">
+            <div class="w-100">
+              <div class="mb-4">
+                <p class="mb-1">財富對折師阿哲</p>
+                <svg width="96" height="17" viewBox="0 0 96 17" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99924 12.5484L3.64924 14.7904C3.61631 14.8074 3.57932 14.8149 3.54238 14.812C3.50545 14.8092 3.47002 14.7962 3.44006 14.7744C3.41009 14.7526 3.38676 14.723 3.37267 14.6887C3.35857 14.6544 3.35427 14.617 3.36024 14.5804L4.15024 9.75039L0.672236 6.30839C0.645398 6.28264 0.626357 6.24985 0.617295 6.21377C0.608232 6.1777 0.609515 6.1398 0.620995 6.10442C0.632475 6.06904 0.653689 6.03761 0.682206 6.01373C0.710723 5.98985 0.74539 5.97448 0.782236 5.96939L5.61924 5.22639L7.81924 0.856392C7.83582 0.823111 7.86136 0.795113 7.89298 0.775543C7.9246 0.755973 7.96105 0.745605 7.99824 0.745605C8.03542 0.745605 8.07187 0.755973 8.10349 0.775543C8.13511 0.795113 8.16065 0.823111 8.17724 0.856392L10.3772 5.22639L15.2142 5.96939C15.2509 5.97484 15.2853 5.9904 15.3135 6.01432C15.3418 6.03824 15.3628 6.06958 15.3743 6.10481C15.3857 6.14004 15.3871 6.17776 15.3782 6.21372C15.3694 6.24969 15.3507 6.28248 15.3242 6.30839L11.8492 9.75139L12.6372 14.5814C12.643 14.6179 12.6385 14.6552 12.6243 14.6893C12.6101 14.7234 12.5868 14.7529 12.5569 14.7746C12.5269 14.7962 12.4916 14.8092 12.4548 14.8119C12.418 14.8147 12.3811 14.8073 12.3482 14.7904L7.99924 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.9992 12.5484L23.6492 14.7904C23.6163 14.8074 23.5793 14.8149 23.5424 14.812C23.5054 14.8092 23.47 14.7962 23.4401 14.7744C23.4101 14.7526 23.3868 14.723 23.3727 14.6887C23.3586 14.6544 23.3543 14.617 23.3602 14.5804L24.1502 9.75039L20.6722 6.30839C20.6454 6.28264 20.6264 6.24985 20.6173 6.21377C20.6082 6.1777 20.6095 6.1398 20.621 6.10442C20.6325 6.06904 20.6537 6.03761 20.6822 6.01373C20.7107 5.98985 20.7454 5.97448 20.7822 5.96939L25.6192 5.22639L27.8192 0.856392C27.8358 0.823111 27.8614 0.795113 27.893 0.775543C27.9246 0.755973 27.961 0.745605 27.9982 0.745605C28.0354 0.745605 28.0719 0.755973 28.1035 0.775543C28.1351 0.795113 28.1606 0.823111 28.1772 0.856392L30.3772 5.22639L35.2142 5.96939C35.2509 5.97484 35.2853 5.9904 35.3135 6.01432C35.3418 6.03824 35.3628 6.06958 35.3743 6.10481C35.3857 6.14004 35.3871 6.17776 35.3782 6.21372C35.3694 6.24969 35.3507 6.28248 35.3242 6.30839L31.8492 9.75139L32.6372 14.5814C32.643 14.6179 32.6385 14.6552 32.6243 14.6893C32.6101 14.7234 32.5868 14.7529 32.5569 14.7746C32.5269 14.7962 32.4916 14.8092 32.4548 14.8119C32.418 14.8147 32.3811 14.8073 32.3482 14.7904L27.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M47.9992 12.5484L43.6492 14.7904C43.6163 14.8074 43.5793 14.8149 43.5424 14.812C43.5054 14.8092 43.47 14.7962 43.4401 14.7744C43.4101 14.7526 43.3868 14.723 43.3727 14.6887C43.3586 14.6544 43.3543 14.617 43.3602 14.5804L44.1502 9.75039L40.6722 6.30839C40.6454 6.28264 40.6264 6.24985 40.6173 6.21377C40.6082 6.1777 40.6095 6.1398 40.621 6.10442C40.6325 6.06904 40.6537 6.03761 40.6822 6.01373C40.7107 5.98985 40.7454 5.97448 40.7822 5.96939L45.6192 5.22639L47.8192 0.856392C47.8358 0.823111 47.8614 0.795113 47.893 0.775543C47.9246 0.755973 47.961 0.745605 47.9982 0.745605C48.0354 0.745605 48.0719 0.755973 48.1035 0.775543C48.1351 0.795113 48.1606 0.823111 48.1772 0.856392L50.3772 5.22639L55.2142 5.96939C55.2509 5.97484 55.2853 5.9904 55.3135 6.01432C55.3418 6.03824 55.3628 6.06958 55.3743 6.10481C55.3857 6.14004 55.3871 6.17776 55.3782 6.21372C55.3694 6.24969 55.3507 6.28248 55.3242 6.30839L51.8492 9.75139L52.6372 14.5814C52.643 14.6179 52.6385 14.6552 52.6243 14.6893C52.6101 14.7234 52.5868 14.7529 52.5569 14.7746C52.5269 14.7962 52.4916 14.8092 52.4548 14.8119C52.418 14.8147 52.3811 14.8073 52.3482 14.7904L47.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M67.9992 12.5484L63.6492 14.7904C63.6163 14.8074 63.5793 14.8149 63.5424 14.812C63.5054 14.8092 63.47 14.7962 63.4401 14.7744C63.4101 14.7526 63.3868 14.723 63.3727 14.6887C63.3586 14.6544 63.3543 14.617 63.3602 14.5804L64.1502 9.75039L60.6722 6.30839C60.6454 6.28264 60.6264 6.24985 60.6173 6.21377C60.6082 6.1777 60.6095 6.1398 60.621 6.10442C60.6325 6.06904 60.6537 6.03761 60.6822 6.01373C60.7107 5.98985 60.7454 5.97448 60.7822 5.96939L65.6192 5.22639L67.8192 0.856392C67.8358 0.823111 67.8614 0.795113 67.893 0.775543C67.9246 0.755973 67.961 0.745605 67.9982 0.745605C68.0354 0.745605 68.0719 0.755973 68.1035 0.775543C68.1351 0.795113 68.1606 0.823111 68.1772 0.856392L70.3772 5.22639L75.2142 5.96939C75.2509 5.97484 75.2853 5.9904 75.3135 6.01432C75.3418 6.03824 75.3628 6.06958 75.3743 6.10481C75.3857 6.14004 75.3871 6.17776 75.3782 6.21372C75.3694 6.24969 75.3507 6.28248 75.3242 6.30839L71.8492 9.75139L72.6372 14.5814C72.643 14.6179 72.6385 14.6552 72.6243 14.6893C72.6101 14.7234 72.5868 14.7529 72.5569 14.7746C72.5269 14.7962 72.4916 14.8092 72.4548 14.8119C72.418 14.8147 72.3811 14.8073 72.3482 14.7904L67.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M87.9992 12.5484L83.6492 14.7904C83.6163 14.8074 83.5793 14.8149 83.5424 14.812C83.5054 14.8092 83.47 14.7962 83.4401 14.7744C83.4101 14.7526 83.3868 14.723 83.3727 14.6887C83.3586 14.6544 83.3543 14.617 83.3602 14.5804L84.1502 9.75039L80.6722 6.30839C80.6454 6.28264 80.6264 6.24985 80.6173 6.21377C80.6082 6.1777 80.6095 6.1398 80.621 6.10442C80.6325 6.06904 80.6537 6.03761 80.6822 6.01373C80.7107 5.98985 80.7454 5.97448 80.7822 5.96939L85.6192 5.22639L87.8192 0.856392C87.8358 0.823111 87.8614 0.795113 87.893 0.775543C87.9246 0.755973 87.961 0.745605 87.9982 0.745605C88.0354 0.745605 88.0719 0.755973 88.1035 0.775543C88.1351 0.795113 88.1606 0.823111 88.1772 0.856392L90.3772 5.22639L95.2142 5.96939C95.2509 5.97484 95.2853 5.9904 95.3135 6.01432C95.3418 6.03824 95.3628 6.06958 95.3743 6.10481C95.3857 6.14004 95.3871 6.17776 95.3782 6.21372C95.3694 6.24969 95.3507 6.28248 95.3242 6.30839L91.8492 9.75139L92.6372 14.5814C92.643 14.6179 92.6385 14.6552 92.6243 14.6893C92.6101 14.7234 92.5868 14.7529 92.5569 14.7746C92.5269 14.7962 92.4916 14.8092 92.4548 14.8119C92.418 14.8147 92.3811 14.8073 92.3482 14.7904L87.9992 12.5484Z" fill="#A37F71"/>
+                </svg>
+                <span class="fs-9 text-neutral-80">2024-05-29</span>
+              </div>
+              <div class="bg-neutral-10 rounded-5 p-4">
+                <p class="fw-semibold mb-3">第一次帶女友出國，股票先不看了</p>
+                <p class="text-neutral-80 mb-0">想不到第一次出國就被女友說「太會安排了吧❤️」</p>
+                <p class="text-neutral-80 mb-0">看完夜景還能順便退稅、吃飯、買禮物，一張票搞定，男人就該這樣做事！</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex bg-white rounded-20 p-7 shadow-sm">
+            <img src="/homeworkWeek8/assets/avatar-4-DlzW7Ni1.png" class="img-fluid wh-60 me-6" alt="avatar-4">
+            <div class="w-100">
+              <div class="mb-4">
+                <p class="mb-1">麗莎｜帶你玩遍全世界</p>
+                <svg width="96" height="17" viewBox="0 0 96 17" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99924 12.5484L3.64924 14.7904C3.61631 14.8074 3.57932 14.8149 3.54238 14.812C3.50545 14.8092 3.47002 14.7962 3.44006 14.7744C3.41009 14.7526 3.38676 14.723 3.37267 14.6887C3.35857 14.6544 3.35427 14.617 3.36024 14.5804L4.15024 9.75039L0.672236 6.30839C0.645398 6.28264 0.626357 6.24985 0.617295 6.21377C0.608232 6.1777 0.609515 6.1398 0.620995 6.10442C0.632475 6.06904 0.653689 6.03761 0.682206 6.01373C0.710723 5.98985 0.74539 5.97448 0.782236 5.96939L5.61924 5.22639L7.81924 0.856392C7.83582 0.823111 7.86136 0.795113 7.89298 0.775543C7.9246 0.755973 7.96105 0.745605 7.99824 0.745605C8.03542 0.745605 8.07187 0.755973 8.10349 0.775543C8.13511 0.795113 8.16065 0.823111 8.17724 0.856392L10.3772 5.22639L15.2142 5.96939C15.2509 5.97484 15.2853 5.9904 15.3135 6.01432C15.3418 6.03824 15.3628 6.06958 15.3743 6.10481C15.3857 6.14004 15.3871 6.17776 15.3782 6.21372C15.3694 6.24969 15.3507 6.28248 15.3242 6.30839L11.8492 9.75139L12.6372 14.5814C12.643 14.6179 12.6385 14.6552 12.6243 14.6893C12.6101 14.7234 12.5868 14.7529 12.5569 14.7746C12.5269 14.7962 12.4916 14.8092 12.4548 14.8119C12.418 14.8147 12.3811 14.8073 12.3482 14.7904L7.99924 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.9992 12.5484L23.6492 14.7904C23.6163 14.8074 23.5793 14.8149 23.5424 14.812C23.5054 14.8092 23.47 14.7962 23.4401 14.7744C23.4101 14.7526 23.3868 14.723 23.3727 14.6887C23.3586 14.6544 23.3543 14.617 23.3602 14.5804L24.1502 9.75039L20.6722 6.30839C20.6454 6.28264 20.6264 6.24985 20.6173 6.21377C20.6082 6.1777 20.6095 6.1398 20.621 6.10442C20.6325 6.06904 20.6537 6.03761 20.6822 6.01373C20.7107 5.98985 20.7454 5.97448 20.7822 5.96939L25.6192 5.22639L27.8192 0.856392C27.8358 0.823111 27.8614 0.795113 27.893 0.775543C27.9246 0.755973 27.961 0.745605 27.9982 0.745605C28.0354 0.745605 28.0719 0.755973 28.1035 0.775543C28.1351 0.795113 28.1606 0.823111 28.1772 0.856392L30.3772 5.22639L35.2142 5.96939C35.2509 5.97484 35.2853 5.9904 35.3135 6.01432C35.3418 6.03824 35.3628 6.06958 35.3743 6.10481C35.3857 6.14004 35.3871 6.17776 35.3782 6.21372C35.3694 6.24969 35.3507 6.28248 35.3242 6.30839L31.8492 9.75139L32.6372 14.5814C32.643 14.6179 32.6385 14.6552 32.6243 14.6893C32.6101 14.7234 32.5868 14.7529 32.5569 14.7746C32.5269 14.7962 32.4916 14.8092 32.4548 14.8119C32.418 14.8147 32.3811 14.8073 32.3482 14.7904L27.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M47.9992 12.5484L43.6492 14.7904C43.6163 14.8074 43.5793 14.8149 43.5424 14.812C43.5054 14.8092 43.47 14.7962 43.4401 14.7744C43.4101 14.7526 43.3868 14.723 43.3727 14.6887C43.3586 14.6544 43.3543 14.617 43.3602 14.5804L44.1502 9.75039L40.6722 6.30839C40.6454 6.28264 40.6264 6.24985 40.6173 6.21377C40.6082 6.1777 40.6095 6.1398 40.621 6.10442C40.6325 6.06904 40.6537 6.03761 40.6822 6.01373C40.7107 5.98985 40.7454 5.97448 40.7822 5.96939L45.6192 5.22639L47.8192 0.856392C47.8358 0.823111 47.8614 0.795113 47.893 0.775543C47.9246 0.755973 47.961 0.745605 47.9982 0.745605C48.0354 0.745605 48.0719 0.755973 48.1035 0.775543C48.1351 0.795113 48.1606 0.823111 48.1772 0.856392L50.3772 5.22639L55.2142 5.96939C55.2509 5.97484 55.2853 5.9904 55.3135 6.01432C55.3418 6.03824 55.3628 6.06958 55.3743 6.10481C55.3857 6.14004 55.3871 6.17776 55.3782 6.21372C55.3694 6.24969 55.3507 6.28248 55.3242 6.30839L51.8492 9.75139L52.6372 14.5814C52.643 14.6179 52.6385 14.6552 52.6243 14.6893C52.6101 14.7234 52.5868 14.7529 52.5569 14.7746C52.5269 14.7962 52.4916 14.8092 52.4548 14.8119C52.418 14.8147 52.3811 14.8073 52.3482 14.7904L47.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M67.9992 12.5484L63.6492 14.7904C63.6163 14.8074 63.5793 14.8149 63.5424 14.812C63.5054 14.8092 63.47 14.7962 63.4401 14.7744C63.4101 14.7526 63.3868 14.723 63.3727 14.6887C63.3586 14.6544 63.3543 14.617 63.3602 14.5804L64.1502 9.75039L60.6722 6.30839C60.6454 6.28264 60.6264 6.24985 60.6173 6.21377C60.6082 6.1777 60.6095 6.1398 60.621 6.10442C60.6325 6.06904 60.6537 6.03761 60.6822 6.01373C60.7107 5.98985 60.7454 5.97448 60.7822 5.96939L65.6192 5.22639L67.8192 0.856392C67.8358 0.823111 67.8614 0.795113 67.893 0.775543C67.9246 0.755973 67.961 0.745605 67.9982 0.745605C68.0354 0.745605 68.0719 0.755973 68.1035 0.775543C68.1351 0.795113 68.1606 0.823111 68.1772 0.856392L70.3772 5.22639L75.2142 5.96939C75.2509 5.97484 75.2853 5.9904 75.3135 6.01432C75.3418 6.03824 75.3628 6.06958 75.3743 6.10481C75.3857 6.14004 75.3871 6.17776 75.3782 6.21372C75.3694 6.24969 75.3507 6.28248 75.3242 6.30839L71.8492 9.75139L72.6372 14.5814C72.643 14.6179 72.6385 14.6552 72.6243 14.6893C72.6101 14.7234 72.5868 14.7529 72.5569 14.7746C72.5269 14.7962 72.4916 14.8092 72.4548 14.8119C72.418 14.8147 72.3811 14.8073 72.3482 14.7904L67.9992 12.5484Z" fill="#A37F71"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M87.9992 12.5484L83.6492 14.7904C83.6163 14.8074 83.5793 14.8149 83.5424 14.812C83.5054 14.8092 83.47 14.7962 83.4401 14.7744C83.4101 14.7526 83.3868 14.723 83.3727 14.6887C83.3586 14.6544 83.3543 14.617 83.3602 14.5804L84.1502 9.75039L80.6722 6.30839C80.6454 6.28264 80.6264 6.24985 80.6173 6.21377C80.6082 6.1777 80.6095 6.1398 80.621 6.10442C80.6325 6.06904 80.6537 6.03761 80.6822 6.01373C80.7107 5.98985 80.7454 5.97448 80.7822 5.96939L85.6192 5.22639L87.8192 0.856392C87.8358 0.823111 87.8614 0.795113 87.893 0.775543C87.9246 0.755973 87.961 0.745605 87.9982 0.745605C88.0354 0.745605 88.0719 0.755973 88.1035 0.775543C88.1351 0.795113 88.1606 0.823111 88.1772 0.856392L90.3772 5.22639L95.2142 5.96939C95.2509 5.97484 95.2853 5.9904 95.3135 6.01432C95.3418 6.03824 95.3628 6.06958 95.3743 6.10481C95.3857 6.14004 95.3871 6.17776 95.3782 6.21372C95.3694 6.24969 95.3507 6.28248 95.3242 6.30839L91.8492 9.75139L92.6372 14.5814C92.643 14.6179 92.6385 14.6552 92.6243 14.6893C92.6101 14.7234 92.5868 14.7529 92.5569 14.7746C92.5269 14.7962 92.4916 14.8092 92.4548 14.8119C92.418 14.8147 92.3811 14.8073 92.3482 14.7904L87.9992 12.5484Z" fill="#A37F71"/>
+                </svg>
+                <span class="fs-9 text-neutral-80">2024-04-23</span>
+              </div>
+              <div class="bg-neutral-10 rounded-5 p-4">
+                <p class="fw-semibold mb-3">IG狂打卡模式啟動</p>
+                <p class="text-neutral-80 mb-0">光那個透明玻璃窗我就拍了 30 張，爽度不同凡響</p>
+                <p class="text-neutral-80 mb-0">夕陽照下來直接幫我自動磨皮濾鏡，根本不用修圖！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-black py-lg-13 py-12">
+  <div class="container d-flex justify-content-lg-between flex-lg-row flex-column">
+    <div>
+      <img src="data:image/png;base64,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" class="logo-footer mb-lg-7 mb-8" alt="logo" />
+      <ul class="list-unstyled d-flex flex-lg-row flex-column mb-lg-0 mb-8">
+        <li class="mb-lg-0 mb-4"><a href="#" class="text-decoration-none text-white fw-normal me-7 mb-lg-0 mb-4">常見問題</a></li>
+        <li class="mb-lg-0 mb-4"><a href="#" class="text-decoration-none text-white fw-normal me-7">關於我們</a></li>
+        <li class="mb-lg-0 mb-4"><a href="#" class="text-decoration-none text-white fw-normal me-7">隱私權政策</a></li>
+        <li><a href="#" class="text-decoration-none text-white fw-normal me-7">隱私權政策</a></li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-end">
+      <div class="text-lg-end">
+        <div class="mb-4">
+          <!--line-->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_187_42659)">
+          <path opacity="0.7" d="M20 0.5C30.7696 0.5 39.5 9.23045 39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5Z" stroke="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M29 19.0263C29 15.152 24.9625 12 20 12C15.0377 12 11 15.152 11 19.0263C11 22.4994 14.2019 25.4086 18.527 25.9589C18.8199 26.0196 19.2188 26.1451 19.3198 26.386C19.4106 26.6047 19.3793 26.9474 19.3488 27.1685C19.3488 27.1685 19.2436 27.7796 19.2204 27.91C19.1814 28.1288 19.0395 28.7659 20 28.3767C20.9608 27.9874 25.1828 25.4404 27.071 23.3494C28.3754 21.9736 29 20.577 29 19.0263ZM14.4146 21.1339C14.1861 21.1339 14 20.9408 14 20.703V17.4397C14 17.2022 14.2116 17.0089 14.48 17.0089C14.7484 17.0089 14.9 17.2006 14.9 17.4397V20.2724H15.9854C16.2143 20.2724 16.4 20.4657 16.4 20.703C16.4 20.9408 16.2143 21.1339 15.9854 21.1339H14.4146ZM18.2 20.703C18.2 20.9408 17.9981 21.1339 17.7501 21.1339C17.5019 21.1339 17.3 20.9408 17.3 20.703V17.4397C17.3 17.2022 17.5019 17.0089 17.7501 17.0089C17.9981 17.0089 18.2 17.2022 18.2 17.4397V20.703ZM22.7 20.703C22.7 20.889 22.5717 21.0532 22.3797 21.1116C22.3316 21.1265 22.2813 21.1339 22.2309 21.1339C22.0849 21.1339 21.9449 21.0696 21.8566 20.9616L20.0372 18.6842V20.703C20.0372 20.9408 19.8272 21.1339 19.5687 21.1339C19.3103 21.1339 19.1 20.9408 19.1 20.703V17.4397C19.1 17.2541 19.2288 17.0899 19.4203 17.0312C19.4686 17.0162 19.5187 17.0089 19.5691 17.0089C19.7153 17.0089 19.8554 17.0731 19.9431 17.1812L21.7631 19.4587V17.4397C21.7631 17.2022 21.9735 17.0089 22.2316 17.0089C22.4902 17.0089 22.7 17.2022 22.7 17.4397V20.703ZM25.5853 18.6407C25.8142 18.6407 26 18.8339 26 19.0715C26 19.3088 25.8142 19.502 25.5853 19.502H24.4294V20.2724H25.5853C25.8138 20.2724 26 20.4657 26 20.703C26 20.9408 25.8138 21.1339 25.5853 21.1339H24.0145C23.7863 21.1339 23.6 20.9408 23.6 20.703V19.0726V19.0715V17.4397C23.6 17.2022 23.7859 17.0089 24.0145 17.0089H25.5853C25.8142 17.0089 26 17.2022 26 17.4397C26 17.6772 25.8142 17.8702 25.5853 17.8702H24.4294V18.6407H25.5853Z" fill="white"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_187_42659">
+          <rect width="40" height="40" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+          <!--youtube-->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="mx-4" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_187_42662)">
+          <path opacity="0.7" d="M20 0.5C30.7696 0.5 39.5 9.23045 39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5Z" stroke="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 11.9946C20.855 11.9946 21.732 12.0166 22.582 12.0526L23.586 12.1006L24.547 12.1576L25.447 12.2186L26.269 12.2826C27.161 12.3509 28.0004 12.7316 28.6395 13.3577C29.2786 13.9838 29.6764 14.8152 29.763 15.7056L29.803 16.1306L29.878 17.0406C29.948 17.9836 30 19.0116 30 19.9946C30 20.9776 29.948 22.0056 29.878 22.9486L29.803 23.8586C29.79 24.0046 29.777 24.1456 29.763 24.2836C29.6764 25.1742 29.2784 26.0058 28.6391 26.6319C27.9999 27.258 27.1602 27.6386 26.268 27.7066L25.448 27.7696L24.548 27.8316L23.586 27.8886L22.582 27.9366C21.732 27.9726 20.855 27.9946 20 27.9946C19.145 27.9946 18.268 27.9726 17.418 27.9366L16.414 27.8886L15.453 27.8316L14.553 27.7696L13.731 27.7066C12.839 27.6384 11.9996 27.2577 11.3605 26.6316C10.7214 26.0055 10.3236 25.1741 10.237 24.2836L10.197 23.8586L10.122 22.9486C10.0455 21.9658 10.0048 20.9804 10 19.9946C10 19.0116 10.052 17.9836 10.122 17.0406L10.197 16.1306C10.21 15.9846 10.223 15.8436 10.237 15.7056C10.3235 14.8153 10.7212 13.984 11.3601 13.358C11.999 12.7319 12.8381 12.3511 13.73 12.2826L14.551 12.2186L15.451 12.1576L16.413 12.1006L17.417 12.0526C18.268 12.0166 19.145 11.9946 20 11.9946ZM18 17.5696V22.4196C18 22.8816 18.5 23.1696 18.9 22.9396L23.1 20.5146C23.1914 20.462 23.2673 20.3863 23.3201 20.295C23.3729 20.2037 23.4007 20.1001 23.4007 19.9946C23.4007 19.8892 23.3729 19.7856 23.3201 19.6943C23.2673 19.603 23.1914 19.5272 23.1 19.4746L18.9 17.0506C18.8088 16.998 18.7053 16.9702 18.5999 16.9702C18.4945 16.9703 18.3911 16.998 18.2998 17.0507C18.2086 17.1034 18.1329 17.1792 18.0802 17.2705C18.0276 17.3618 17.9999 17.4653 18 17.5706V17.5696Z" fill="white"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_187_42662">
+          <rect width="40" height="40" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+          <!--facebook-->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_187_42665)">
+          <path opacity="0.7" d="M20 0.5C30.7696 0.5 39.5 9.23045 39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5Z" stroke="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5983 20.9736H24.1413L24.5219 18.0404H21.5983V16.1677C21.5983 15.3184 21.8357 14.7397 23.0615 14.7397L24.625 14.739V12.1156C24.3545 12.0799 23.4265 12 22.3467 12C20.0926 12 18.5494 13.3669 18.5494 15.8773V18.0404H16V20.9736H18.5494V28.5H21.5983V20.9736Z" fill="white"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_187_42665">
+          <rect width="40" height="40" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+        </div>
+        <p class="mb-0 text-nature fs-9">copyright © 2025 ZOBAA 旅遊網站 All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--愛心收藏-->
+    <script>
+      const heartBtns = document.querySelectorAll(".heartBtn");
+
+      heartBtns.forEach((heartBtn) => {
+        const heartIcon = heartBtn.querySelector("span");
+
+        heartBtn.addEventListener("click", () => {
+          const current = heartIcon.textContent.trim();
+
+          if (current === "favorite_border") {
+            heartIcon.textContent = "favorite"; // 實心
+            heartIcon.classList.remove("text-primary");
+            heartIcon.classList.add("text-danger");
+          } else {
+            heartIcon.textContent = "favorite_border"; // 空心
+            heartIcon.classList.remove("text-danger");
+            heartIcon.classList.add("text-primary");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
