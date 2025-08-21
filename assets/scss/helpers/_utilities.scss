@@ -199,9 +199,13 @@ $utilities: map-merge(
       property: width,
       class: w,
       values: (
+        20: 20%,   //custom
         25: 25%,
         50: 50%,
+        60: 60%,   //custom
+        65: 65%,   //custom
         75: 75%,
+        80: 80%,   //custom
         100: 100%,
         auto: auto
       )
@@ -737,6 +741,7 @@ $utilities: map-merge(
         6: var(--#{$prefix}border-radius-3xl),     //24px
         7: var(--#{$prefix}border-radius-4xl),     //32px
         8: var(--#{$prefix}border-radius-5xl),     //100px
+        20: 20px,                                  //custom
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )
@@ -839,6 +844,7 @@ $utilities: map-merge(
         6: var(--#{$prefix}border-radius-3xl),     //24px
         7: var(--#{$prefix}border-radius-4xl),     //32px
         8: var(--#{$prefix}border-radius-5xl),     //100px
+        20: 20px,                                  //custom
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill)
       )

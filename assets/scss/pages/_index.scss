@@ -151,6 +151,10 @@
   right: -82px;
 }
 
+.heartBtn {
+  cursor: pointer; /* 滑鼠移上去變手指 */
+}
+
 .heart-bg {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.4);
@@ -158,7 +162,6 @@
   border-top-right-radius: 24px;
   top: 0;
   right: 12px;
-  cursor: pointer; /* 滑鼠移上去變手指 */
 }
 
 /*把旅行變成生活的養分*/
