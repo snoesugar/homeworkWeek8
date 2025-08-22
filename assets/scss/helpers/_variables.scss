@@ -366,6 +366,7 @@ $theme-colors: (
   "coffee":     #221F1E,   //custom
   "gray":       #808080,   //custom
   "nature":     #D4D4D4,   //custom
+  "img-text":    rgba(243, 238, 236, 0.6),
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1596,7 +1597,7 @@ $modal-footer-border-width:         $modal-header-border-width !default;
 $modal-sm:                          300px !default;
 $modal-md:                          500px !default;
 $modal-lg:                          800px !default;
-$modal-xl:                          1140px !default;
+$modal-xl:                          1280px;//1140px !default; custom
 
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              none !default;

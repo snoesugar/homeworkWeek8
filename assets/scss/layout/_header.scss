@@ -21,3 +21,16 @@
   background-color: rgba(255, 255, 255, 0.8); /* 滾動後 → 白色半透明 */
   backdrop-filter: blur(5px);                 /* 可選：加毛玻璃效果 */
 }
+
+.w-600 {
+  width: 600px;
+  object-fit: cover
+}
+
+.h-1000 {
+  height: 1000px;
+}
+
+a {
+  cursor: pointer;
+}
