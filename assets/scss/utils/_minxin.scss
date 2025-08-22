@@ -97,7 +97,13 @@
   .fs-lg-2.fs-4 {
     font-size: 40px !important;
   }
+  .fs-lg-3.fs-5 {
+    font-size: 32px !important;
+  }
   .fs-lg-5.fs-6 {
+    font-size: 24px !important;
+  }
+  .fs-lg-5.fs-8 {
     font-size: 24px !important;
   }
   .fs-lg-6.fs-8 {
@@ -111,5 +117,14 @@
   }
   .display-lg-2.display-6 {
     font-size: 72px !important;
+  }
+
+  /*長度/
+  /*search*/
+  .w-lg-65.w-100 {
+    width: 65% !important;
+  }
+  .w-lg-auto.w-100 {
+    width: auto !important;
   }
 }
