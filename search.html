@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>地點搜尋頁</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script type="module" crossorigin src="/homeworkWeek8/assets/main-BUbYnpl4.js"></script>
-    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-TEm1Sain.css">
+    <script type="module" crossorigin src="/homeworkWeek8/assets/main-Cbue5r4Q.js"></script>
+    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-BZcD9ejk.css">
   </head>
   <body>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 <nav class="navbar navbar-expand-lg navbar-light py-lg-4 sticky-lg-top" id="navbar1">
   <div class="container">
     <a class="me-6" href="index.html">
@@ -21,17 +23,17 @@
       <input class="form-control ps-8 search" type="search" placeholder="搜尋景點、地點或城市" aria-label="Search">
     </form>
     <div class="d-lg-flex d-none align-items-center ms-auto">
-      <a href="#" class="d-block">
+      <a href="cart.html" class="d-block">
         <span class="material-symbols-outlined cart me-4">shopping_cart</span>
       </a>
-      <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold" type="submit">登入 / 註冊</button>
+      <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">登入 / 註冊</button>
     </div>
     <!--手機板-->
     <div class="d-lg-none d-flex align-items-center ms-auto">
       <a href="#" class="d-block">
         <span class="material-symbols-outlined text-neutral-80 p-2">search</span>
       </a>
-      <a href="#" class="d-block">
+      <a href="cart.html" class="d-block">
         <span class="material-symbols-outlined cart text-neutral-80 py-2 px-3">shopping_cart</span>
       </a>
     </div>
@@ -60,10 +62,182 @@
     </div>
     <h6 class="fw-bold text-primary mt-6 mb-1">歡迎來到 ZOBAA</h6>
     <p class="fw-normal text-neutral-80">加入會員即可立即訂購、收藏行程，並享相關優惠好禮。</p>
-    <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold w-100 mt-auto" type="submit">登入 / 註冊</button>
+    <button class="btn btn-primary px-7 py-4 rounded-4 fw-semibold w-100 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">登入 / 註冊</button>
   </div>
 </div>
 
+<!--登入-->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex p-lg-8 px-6 overflow-hidden">
+        <div class="d-lg-block d-none">
+          <div class="swiper w-600 h-1000">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides 輪播內容放這-->
+                <div class="swiper-slide">
+                  <img src="/homeworkWeek8/assets/cover-1-VVH3xugZ.png" class="img-fluid rounded-40" alt="cover-1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/homeworkWeek8/assets/cover-2-JqSXl-DU.png" class="img-fluid rounded-40 h-100" alt="cover-2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/homeworkWeek8/assets/cover-3-C9FWxx_q.png" class="img-fluid rounded-40" alt="cover-3">
+                </div>
+            </div>
+            <!-- If we need pagination 分頁點-->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center w-100">
+          <div class="w-600">
+            <h1 class="fs-lg-1 fs-3 fw-bold mb-lg-8 mb-6">歡迎回來！</h2>
+            <a href="#" class="d-flex bg-white border text-decoration-none text-neutral-80 rounded-3 p-4 mb-lg-4 mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#FFC107"/>
+              <path d="M3.15234 7.3455L6.43784 9.755C7.32684 7.554 9.47984 6 11.9993 6C13.5288 6 14.9203 6.577 15.9798 7.5195L18.8083 4.691C17.0223 3.0265 14.6333 2 11.9993 2C8.15834 2 4.82734 4.1685 3.15234 7.3455Z" fill="#FF3D00"/>
+              <path d="M12.0002 22C14.5832 22 16.9302 21.0115 18.7047 19.404L15.6097 16.785C14.5719 17.5742 13.3039 18.001 12.0002 18C9.39916 18 7.19066 16.3415 6.35866 14.027L3.09766 16.5395C4.75266 19.778 8.11366 22 12.0002 22Z" fill="#4CAF50"/>
+              <path d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#1976D2"/>
+              </svg>
+              <p class="m-auto mb-0">使用 Google 帳號登入</p>
+            </a>
+            <a href="#" class="d-flex bg-white border text-decoration-none text-neutral-80 rounded-3 p-4 mb-lg-4 mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_187_47301)">
+              <path d="M21.8725 0.90564H2.13063C1.45442 0.90564 0.90625 1.45381 0.90625 2.13001V21.8719C0.90625 22.5481 1.45442 23.0963 2.13063 23.0963H21.8725C22.5487 23.0963 23.0969 22.5481 23.0969 21.8719V2.13001C23.0969 1.45381 22.5487 0.90564 21.8725 0.90564Z" fill="#3D5A98"/>
+              <path d="M16.2159 23.0944V14.5012H19.0997L19.5309 11.1525H16.2159V9.01498C16.2159 8.04561 16.4859 7.38373 17.8753 7.38373H19.6491V4.38373C18.7901 4.29438 17.927 4.25182 17.0634 4.25623C14.5097 4.25623 12.7509 5.81248 12.7509 8.68311V11.1525H9.86719V14.5012H12.7509V23.0944H16.2159Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_187_47301">
+              <rect width="24" height="24" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              <p class="m-auto mb-0">使用 Facebook 帳號登入</p>
+            </a>
+            <a href="#" class="d-flex bg-white border text-decoration-none text-neutral-80 rounded-3 p-4 mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.1734 7.372C11.2974 7.372 9.94138 6.376 8.51338 6.412C6.62938 6.436 4.90138 7.504 3.92938 9.196C1.97338 12.592 3.42538 17.608 5.33338 20.368C6.26938 21.712 7.37338 23.224 8.83738 23.176C10.2414 23.116 10.7694 22.264 12.4734 22.264C14.1654 22.264 14.6454 23.176 16.1334 23.14C17.6454 23.116 18.6054 21.772 19.5294 20.416C20.5974 18.856 21.0414 17.344 21.0654 17.26C21.0294 17.248 18.1254 16.132 18.0894 12.772C18.0654 9.964 20.3814 8.62 20.4894 8.56C19.1694 6.628 17.1414 6.412 16.4334 6.364C14.5854 6.22 13.0374 7.372 12.1734 7.372ZM15.2934 4.54C16.0734 3.604 16.5894 2.296 16.4454 1C15.3294 1.048 13.9854 1.744 13.1814 2.68C12.4614 3.508 11.8374 4.84 12.0054 6.112C13.2414 6.208 14.5134 5.476 15.2934 4.54Z" fill="black"/>
+              </svg>
+              <p class="m-auto mb-0">使用 Apple 帳號登入</p>
+            </a>
+            <p class="fw-bold mb-4">或使用 ZOBAA 帳號登入</p>
+            <div class="mb-4">
+              <label for="email" class="d-block text-neutral-80 mb-2">電子信箱<span class="text-alert-100 ms-1">*</span></label>
+              <input type="email" id="email" class="login-email border rounded-4 p-4 w-100 text-neutral-60" placeholder="請輸入電子信箱">
+            </div>
+            <div class="mb-2">
+              <label for="password" class="d-block text-neutral-80 mb-2">密碼<span class="text-alert-100 ms-1">*</span></label>
+              <input type="password" id="password" class="login-password border rounded-4 p-4 w-100 text-neutral-60" placeholder="請輸入密碼">
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="form-check mb-8">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" class="text-neutral-80">
+                  記住帳號
+                </label>
+              </div>
+              <a href="#" class="text-decoration-none text-neutral-80">忘記密碼？</a>
+            </div>
+            <button type="button" class="loginBtn text-neutral-60 bg-neutral-40 border-0 py-4 rounded-4 w-100 mb-lg-8 mb-6" onclick="window.location.href='member.html'" disabled>立即登入</button>
+            <span class="text-neutral-80">沒有 ZOBAA 帳號嗎？</span>
+            <a class="text-primary fw-semibold" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">立即註冊</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--註冊-->
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex p-8">
+        <d-lg-block class="d-lg-block d-none">
+          <div class="swiper w-600">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides 輪播內容放這-->
+                <div class="swiper-slide position-relative">
+                  <img src="/homeworkWeek8/assets/cover-1-VVH3xugZ.png" class="img-fluid rounded-40" alt="cover-1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/homeworkWeek8/assets/cover-2-JqSXl-DU.png" class="img-fluid rounded-40" alt="cover-2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/homeworkWeek8/assets/cover-3-C9FWxx_q.png" class="img-fluid rounded-40" alt="cover-3">
+                </div>
+            </div>
+            <!-- If we need pagination 分頁點-->
+            <div class="swiper-pagination"></div>
+          </div>
+        </d-lg-block>
+        <div class="d-flex justify-content-center align-items-center w-100">
+          <div class="w-600">
+            <h1 class="fs-lg-1 fs-3 fw-bold mb-lg-8 mb-6">歡迎加入 ZOBAA</h2>
+            <a href="#" class="d-flex bg-white border text-decoration-none text-neutral-80 rounded-3 p-4 mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#FFC107"/>
+              <path d="M3.15234 7.3455L6.43784 9.755C7.32684 7.554 9.47984 6 11.9993 6C13.5288 6 14.9203 6.577 15.9798 7.5195L18.8083 4.691C17.0223 3.0265 14.6333 2 11.9993 2C8.15834 2 4.82734 4.1685 3.15234 7.3455Z" fill="#FF3D00"/>
+              <path d="M12.0002 22C14.5832 22 16.9302 21.0115 18.7047 19.404L15.6097 16.785C14.5719 17.5742 13.3039 18.001 12.0002 18C9.39916 18 7.19066 16.3415 6.35866 14.027L3.09766 16.5395C4.75266 19.778 8.11366 22 12.0002 22Z" fill="#4CAF50"/>
+              <path d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#1976D2"/>
+              </svg>
+              <p class="m-auto mb-0">使用 Google 帳號登入</p>
+            </a>
+            <a href="#" class="d-flex bg-white border text-decoration-none text-neutral-80 rounded-3 p-4 mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_187_47301)">
+              <path d="M21.8725 0.90564H2.13063C1.45442 0.90564 0.90625 1.45381 0.90625 2.13001V21.8719C0.90625 22.5481 1.45442 23.0963 2.13063 23.0963H21.8725C22.5487 23.0963 23.0969 22.5481 23.0969 21.8719V2.13001C23.0969 1.45381 22.5487 0.90564 21.8725 0.90564Z" fill="#3D5A98"/>
+              <path d="M16.2159 23.0944V14.5012H19.0997L19.5309 11.1525H16.2159V9.01498C16.2159 8.04561 16.4859 7.38373 17.8753 7.38373H19.6491V4.38373C18.7901 4.29438 17.927 4.25182 17.0634 4.25623C14.5097 4.25623 12.7509 5.81248 12.7509 8.68311V11.1525H9.86719V14.5012H12.7509V23.0944H16.2159Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_187_47301">
+              <rect width="24" height="24" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+              <p class="m-auto mb-0">使用 Facebook 帳號登入</p>
+            </a>
+            <a href="#" class="d-flex bg-white border text-decoration-none text-neutral-80 rounded-3 p-4 mb-lg-8 mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.1734 7.372C11.2974 7.372 9.94138 6.376 8.51338 6.412C6.62938 6.436 4.90138 7.504 3.92938 9.196C1.97338 12.592 3.42538 17.608 5.33338 20.368C6.26938 21.712 7.37338 23.224 8.83738 23.176C10.2414 23.116 10.7694 22.264 12.4734 22.264C14.1654 22.264 14.6454 23.176 16.1334 23.14C17.6454 23.116 18.6054 21.772 19.5294 20.416C20.5974 18.856 21.0414 17.344 21.0654 17.26C21.0294 17.248 18.1254 16.132 18.0894 12.772C18.0654 9.964 20.3814 8.62 20.4894 8.56C19.1694 6.628 17.1414 6.412 16.4334 6.364C14.5854 6.22 13.0374 7.372 12.1734 7.372ZM15.2934 4.54C16.0734 3.604 16.5894 2.296 16.4454 1C15.3294 1.048 13.9854 1.744 13.1814 2.68C12.4614 3.508 11.8374 4.84 12.0054 6.112C13.2414 6.208 14.5134 5.476 15.2934 4.54Z" fill="black"/>
+              </svg>
+              <p class="m-auto mb-0">使用 Apple 帳號登入</p>
+            </a>
+            <p class="fw-bold mb-4">或使用 ZOBAA 帳號註冊</p>
+            <div class="mb-4">
+              <label for="email" class="d-block text-neutral-80 mb-2">電子信箱<span class="text-alert-100 ms-1">*</span></label>
+              <input type="email" id="email" class="register-email border rounded-4 p-4 w-100 text-neutral-60" placeholder="請輸入電子信箱">
+            </div>
+            <div class="mb-2">
+              <label for="password" class="d-block text-neutral-80 mb-2">密碼<span class="text-alert-100 ms-1">*</span></label>
+              <input type="password" id="password" class="register-password border rounded-4 p-4 w-100 text-neutral-60" placeholder="請輸入密碼">
+            </div>
+            <div class="mb-lg-8 mb-6">
+              <label for="password" class="d-block text-neutral-80 mb-2">確認密碼<span class="text-alert-100 ms-1">*</span></label>
+              <input type="password" id="password" class="register-password-confirm border rounded-4 p-4 w-100 text-neutral-60" placeholder="請再輸入一次密碼">
+            </div>
+            <button type="button" class="registerBtn text-neutral-60 bg-neutral-40 border-0 py-4 rounded-4 w-100 mb-4" onclick="window.location.href='member.html'" disabled>立即登入</button>
+            <p class="text-neutral-80 fs-9 mb-lg-8 mb-6">建立帳號即表示您同意我們的<a href="#">服務條款</a>及<a href="#">隱私權政策</a></p>
+            <span class="text-neutral-80">已經有 ZOBAA 帳號了嗎？</span>
+            <a class="text-primary fw-semibold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">立即登入 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!--navber透明-->
 <script>
   window.addEventListener("scroll", function() {
     const navbar = document.querySelector(".navbar");
@@ -73,6 +247,96 @@
       navbar.classList.remove("scrolled");
     }
   });
+</script>
+
+<!--登入-->
+<script>
+// 登入 modal
+const loginModal = document.querySelector("#exampleModalToggle");
+const loginEmail = loginModal.querySelector(".login-email");
+const loginPassword = loginModal.querySelector(".login-password");
+const loginBtn = loginModal.querySelector(".loginBtn");
+
+function toggleLoginBtn() {
+  const enabled = loginEmail.value.trim() !== "" && loginPassword.value.trim() !== "";
+  loginBtn.disabled = !enabled;
+  if (enabled) {
+    loginBtn.classList.remove("bg-neutral-40", "text-neutral-60");
+    loginBtn.classList.add("bg-primary", "text-white");
+  } else {
+    loginBtn.classList.add("bg-neutral-40", "text-neutral-60");
+    loginBtn.classList.remove("bg-primary", "text-white");
+  }
+}
+
+loginEmail.addEventListener("input", toggleLoginBtn);
+loginPassword.addEventListener("input", toggleLoginBtn);
+
+// 註冊 modal
+const registerModal = document.querySelector("#exampleModalToggle2");
+const registerEmail = registerModal.querySelector(".register-email");
+const registerPassword = registerModal.querySelector(".register-password");
+const registerPasswordConfirm = registerModal.querySelector(".register-password-confirm");
+const registerBtn = registerModal.querySelector(".registerBtn");
+
+function toggleRegisterBtn() {
+  const enabled =
+    registerEmail.value.trim() !== "" &&
+    registerPassword.value.trim() !== "" &&
+    registerPasswordConfirm.value.trim() !== "";
+    
+  registerBtn.disabled = !enabled;
+  if (enabled) {
+    registerBtn.classList.remove("bg-neutral-40", "text-neutral-60");
+    registerBtn.classList.add("bg-primary", "text-white");
+  } else {
+    registerBtn.classList.add("bg-neutral-40", "text-neutral-60");
+    registerBtn.classList.remove("bg-primary", "text-white");
+  }
+}
+
+registerEmail.addEventListener("input", toggleRegisterBtn);
+registerPassword.addEventListener("input", toggleRegisterBtn);
+registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
+</script>
+
+<!--輪播-->
+<script>
+  const swiper = new Swiper(".swiper", {
+  //間距24px
+  spaceBetween: 16,
+  pagination: {
+    el: ".swiper-pagination"
+  },
+  // 左右箭頭
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  //呈現三個
+  slidesPerView: 3,
+  // 滾動條
+  scrollbar: {
+    el: ".swiper-scrollbar"
+  },
+  autoplay: true,
+
+  // 響應式設定（類似 Bootstrap 的斷點）
+  breakpoints: {
+    // 0px 以上（手機）
+    0: {
+      slidesPerView: 1
+    },
+    // 768px 以上（平板）
+    768: {
+      slidesPerView: 1
+    },
+    // 992px 以上（桌機）
+    992: {
+      slidesPerView: 1
+    }
+  }
+});
 </script>    <!--大阪-->
     <div class="container py-lg-12 py-8">
       <div class="d-lg-block d-none">
