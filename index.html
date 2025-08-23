@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首頁</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script type="module" crossorigin src="/homeworkWeek8/assets/main-Cbue5r4Q.js"></script>
-    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-BZcD9ejk.css">
+    <script type="module" crossorigin src="/homeworkWeek8/assets/main-KK48VkqA.js"></script>
+    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-Ck6erkMI.css">
   </head>
   <body>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -302,41 +302,48 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
 
 <!--輪播-->
 <script>
-  const swiper = new Swiper(".swiper", {
-  //間距24px
-  spaceBetween: 16,
-  pagination: {
-    el: ".swiper-pagination"
-  },
-  // 左右箭頭
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  //呈現三個
-  slidesPerView: 3,
-  // 滾動條
-  scrollbar: {
-    el: ".swiper-scrollbar"
-  },
-  autoplay: true,
+   document.addEventListener("DOMContentLoaded", function () {
+    // 找出所有存在的 swiper 容器
+    const swiperContainers = document.querySelectorAll(".swiper");
 
-  // 響應式設定（類似 Bootstrap 的斷點）
-  breakpoints: {
-    // 0px 以上（手機）
-    0: {
-      slidesPerView: 1
-    },
-    // 768px 以上（平板）
-    768: {
-      slidesPerView: 1
-    },
-    // 992px 以上（桌機）
-    992: {
-      slidesPerView: 1
+    // 如果頁面上有輪播，才啟動
+    if (swiperContainers.length > 0) {
+      swiperContainers.forEach((container, index) => {
+        new Swiper(container, {
+          // 間距
+          spaceBetween: 16,
+          // 分頁
+          pagination: {
+            el: container.querySelector(".swiper-pagination"),
+          },
+          // 左右箭頭
+          navigation: {
+            nextEl: container.querySelector(".swiper-button-next"),
+            prevEl: container.querySelector(".swiper-button-prev"),
+          },
+          // 滾動條
+          scrollbar: {
+            el: container.querySelector(".swiper-scrollbar"),
+          },
+          autoplay: true,
+          slidesPerView: 3,
+
+          // 響應式設定
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 1,
+            },
+          },
+        });
+      });
     }
-  }
-});
+  });
 </script>    <!--主畫面-->
     <div class="mt-90">
       <div class="hero-bg p-hero m-auto">
@@ -368,7 +375,7 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
         <div class="fs-lg-8 fs-9 text-white">
           <p class="mb-lg-2 mb-1">來看我們的精選推薦行程，滿意度高達 99.2%</p>
           <p class="mb-lg-6 mb-3">給自己一個難忘的旅遊行程吧！</p>
-          <a href="#" class="d-flex align-items-center text-decoration-none text-white ">查看全部行程<span class="material-symbols-outlined">arrow_forward</span></a>
+          <a href="search.html" class="d-flex align-items-center text-decoration-none text-white ">查看全部行程<span class="material-symbols-outlined">arrow_forward</span></a>
         </div>
       </div>
       <div class="container">
@@ -1341,7 +1348,7 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
                 <p class="fs-8 fw-bold text-primary-80 mb-0">旅人五星好評</p>
               </div>
             </div>
-            <button type="button" class="d-inline-flex justify-content-between align-items-center bg-black text-white fs-lg-8 fs-9 py-lg-6 px-lg-7 py-4 px-6 rounded-8 fw-bold border-0 rwd-w-100">立即探索我們的精心旅程
+            <button type="button" class="d-inline-flex justify-content-between align-items-center bg-black text-white fs-lg-8 fs-9 py-lg-6 px-lg-7 py-4 px-6 rounded-8 fw-bold border-0 rwd-w-100" onclick="window.location.href='search.html'">立即探索我們的精心旅程
               <div class="bg-white rounded-8 ms-4">
                 <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
               </div>
@@ -1487,45 +1494,6 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
           });
         });
       });
-    </script>
-
-    <!--輪播-->
-    <script>
-      const swiper = new Swiper(".swiper", {
-      //間距24px
-      spaceBetween: 24,
-      pagination: {
-        el: ".swiper-pagination"
-      },
-      // 左右箭頭
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      //呈現三個
-      slidesPerView: 1,
-      // 滾動條
-      scrollbar: {
-        el: ".swiper-scrollbar"
-      },
-      autoplay: true,
-
-      // 響應式設定（類似 Bootstrap 的斷點）
-      breakpoints: {
-        // 0px 以上（手機）
-        0: {
-          slidesPerView: 1
-        },
-        // 768px 以上（平板）
-        768: {
-          slidesPerView: 1
-        },
-        // 992px 以上（桌機）
-        992: {
-          slidesPerView: 2
-        }
-      }
-    });
     </script>
   </body>
 </html>

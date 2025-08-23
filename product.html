@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>商品介紹頁</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script type="module" crossorigin src="/homeworkWeek8/assets/main-Cbue5r4Q.js"></script>
-    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-BZcD9ejk.css">
+    <script type="module" crossorigin src="/homeworkWeek8/assets/main-KK48VkqA.js"></script>
+    <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-Ck6erkMI.css">
   </head>
   <body>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -302,41 +302,48 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
 
 <!--輪播-->
 <script>
-  const swiper = new Swiper(".swiper", {
-  //間距24px
-  spaceBetween: 16,
-  pagination: {
-    el: ".swiper-pagination"
-  },
-  // 左右箭頭
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  //呈現三個
-  slidesPerView: 3,
-  // 滾動條
-  scrollbar: {
-    el: ".swiper-scrollbar"
-  },
-  autoplay: true,
+   document.addEventListener("DOMContentLoaded", function () {
+    // 找出所有存在的 swiper 容器
+    const swiperContainers = document.querySelectorAll(".swiper");
 
-  // 響應式設定（類似 Bootstrap 的斷點）
-  breakpoints: {
-    // 0px 以上（手機）
-    0: {
-      slidesPerView: 1
-    },
-    // 768px 以上（平板）
-    768: {
-      slidesPerView: 1
-    },
-    // 992px 以上（桌機）
-    992: {
-      slidesPerView: 1
+    // 如果頁面上有輪播，才啟動
+    if (swiperContainers.length > 0) {
+      swiperContainers.forEach((container, index) => {
+        new Swiper(container, {
+          // 間距
+          spaceBetween: 16,
+          // 分頁
+          pagination: {
+            el: container.querySelector(".swiper-pagination"),
+          },
+          // 左右箭頭
+          navigation: {
+            nextEl: container.querySelector(".swiper-button-next"),
+            prevEl: container.querySelector(".swiper-button-prev"),
+          },
+          // 滾動條
+          scrollbar: {
+            el: container.querySelector(".swiper-scrollbar"),
+          },
+          autoplay: true,
+          slidesPerView: 3,
+
+          // 響應式設定
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 1,
+            },
+          },
+        });
+      });
     }
-  }
-});
+  });
 </script>    
     <div class="bg-neutral-10">
       <!--RWD-->
@@ -981,44 +988,6 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
           }
         });
       });
-    </script>
-    <!--輪播-->
-    <script>
-      const swiper = new Swiper(".swiper", {
-      //間距24px
-      spaceBetween: 24,
-      pagination: {
-        el: ".swiper-pagination"
-      },
-      // 左右箭頭
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      //呈現三個
-      slidesPerView: 3,
-      // 滾動條
-      scrollbar: {
-        el: ".swiper-scrollbar"
-      },
-      autoplay: true,
-
-      // 響應式設定（類似 Bootstrap 的斷點）
-      breakpoints: {
-        // 0px 以上（手機）
-        0: {
-          slidesPerView: 1
-        },
-        // 768px 以上（平板）
-        768: {
-          slidesPerView: 1
-        },
-        // 992px 以上（桌機）
-        992: {
-          slidesPerView: 1
-        }
-      }
-    });
     </script>
     <!--方案列表-->
     <script>
