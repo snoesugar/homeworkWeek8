@@ -40,7 +40,7 @@
         <div class="fs-lg-8 fs-9 text-white">
           <p class="mb-lg-2 mb-1">來看我們的精選推薦行程，滿意度高達 99.2%</p>
           <p class="mb-lg-6 mb-3">給自己一個難忘的旅遊行程吧！</p>
-          <a href="#" class="d-flex align-items-center text-decoration-none text-white ">查看全部行程<span class="material-symbols-outlined">arrow_forward</span></a>
+          <a href="search.html" class="d-flex align-items-center text-decoration-none text-white ">查看全部行程<span class="material-symbols-outlined">arrow_forward</span></a>
         </div>
       </div>
       <div class="container">
@@ -1013,7 +1013,7 @@
                 <p class="fs-8 fw-bold text-primary-80 mb-0">旅人五星好評</p>
               </div>
             </div>
-            <button type="button" class="d-inline-flex justify-content-between align-items-center bg-black text-white fs-lg-8 fs-9 py-lg-6 px-lg-7 py-4 px-6 rounded-8 fw-bold border-0 rwd-w-100">立即探索我們的精心旅程
+            <button type="button" class="d-inline-flex justify-content-between align-items-center bg-black text-white fs-lg-8 fs-9 py-lg-6 px-lg-7 py-4 px-6 rounded-8 fw-bold border-0 rwd-w-100" onclick="window.location.href='search.html'">立即探索我們的精心旅程
               <div class="bg-white rounded-8 ms-4">
                 <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
               </div>
@@ -1105,45 +1105,6 @@
           });
         });
       });
-    </script>
-
-    <!--輪播-->
-    <script>
-      const swiper = new Swiper(".swiper", {
-      //間距24px
-      spaceBetween: 24,
-      pagination: {
-        el: ".swiper-pagination"
-      },
-      // 左右箭頭
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      //呈現三個
-      slidesPerView: 1,
-      // 滾動條
-      scrollbar: {
-        el: ".swiper-scrollbar"
-      },
-      autoplay: true,
-
-      // 響應式設定（類似 Bootstrap 的斷點）
-      breakpoints: {
-        // 0px 以上（手機）
-        0: {
-          slidesPerView: 1
-        },
-        // 768px 以上（平板）
-        768: {
-          slidesPerView: 1
-        },
-        // 992px 以上（桌機）
-        992: {
-          slidesPerView: 2
-        }
-      }
-    });
     </script>
   </body>
 </html>

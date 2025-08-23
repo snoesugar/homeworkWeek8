@@ -1,0 +1,39 @@
+.w-258 {
+  width: 258px;
+}
+
+.accordion-container {
+  position: relative;
+}
+
+/* 整個容器固定在視窗底部 */
+.accordion-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+
+/* 展開內容浮動往上 */
+.accordion-container .accordion-collapse {
+  position: absolute;
+  bottom: 100%; /* 往按鈕上方展開 */
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  transition: all 0.3s ease; /* 平滑動畫 */
+}
+
+/* 遮罩 */
+.accordion-overlay {
+  display: none; /* 初始隱藏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 10; /* 在內容下方 */
+}
