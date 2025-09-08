@@ -212,32 +212,32 @@
     <!--斜角切-->
     <div class="bg-deco-rl-split"></div>
     <!--靈感地圖-->
-    <div class="bg-primary-10 py-lg-14 py-8 overflow-x-hidden">
+    <div class="bg-primary-10 py-lg-14 py-8">
       <div class="container">
-        <div class="row justify-content-between mb-lg-12 mb-8">
+        <div class="row justify-content-between mb-lg-2 mb-0">
           <div class="col-lg-5 col-11">
             <div class="position-relative">
               <h2 class="display-lg-2 display-6 fw-bold text-primary mb-2">今年旅行的</h2>
               <h2 class="display-lg-2 display-6 fw-bold text-primary mb-lg-5 mb-6">靈感地圖</h2>
               <img src="/assets/images/index/deco-text-1.svg" class="position-absolute translate-middle-y top-0 end-0" alt="deco-text-1"> <!--被壓到-->
             </div>
-              <ul class="nav nav-pills mb-lg-3 mb-6 overflow-auto" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
+              <ul class="nav nav-pills mb-lg-3 mb-6 flex-nowrap overflow-auto" id="pills-tab" role="tablist">
+                <li class="nav-item flex-shrink-0" role="presentation">
                   <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">全部</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item flex-shrink-0" role="presentation">
                   <button class="nav-link" id="pills-asia-tab" data-bs-toggle="pill" data-bs-target="#pills-asia" type="button" role="tab" aria-controls="pills-asia" aria-selected="false">亞洲</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item flex-shrink-0" role="presentation">
                   <button class="nav-link" id="pills-europe-tab" data-bs-toggle="pill" data-bs-target="#pills-europe" type="button" role="tab" aria-controls="pills-europe" aria-selected="false">歐洲</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item flex-shrink-0" role="presentation">
                   <button class="nav-link" id="pills-america-tab" data-bs-toggle="pill" data-bs-target="#pills-america" type="button" role="tab" aria-controls="pills-america" aria-selected="false">美洲</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item flex-shrink-0" role="presentation">
                   <button class="nav-link" id="pills-oceania-tab" data-bs-toggle="pill" data-bs-target="#pills-oceania" type="button" role="tab" aria-controls="pills-oceania" aria-selected="false">大洋洲</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item flex-shrink-0" role="presentation">
                   <button class="nav-link" id="pills-africa-tab" data-bs-toggle="pill" data-bs-target="#pills-africa" type="button" role="tab" aria-controls="pills-africa" aria-selected="false">非洲</button>
                 </li>
               </ul>
@@ -252,155 +252,158 @@
           </div>
         </div>
         <!--靈感地圖列表-->
-        <!--電腦版-->
-        <div class="tab-content d-lg-block d-none" id="pills-tabContent">
+        <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
             <div class="row d-flex flex-nowrap">
-              <!--第1個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">1</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-1.png" class="img-fluid rounded-5 h-100" alt="map-1">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">亞洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">日本京都</span>
+              <div class="swiper pt-11 px-4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <!--第1個-->
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">1</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-1.png" class="img-fluid rounded-5 map-img" alt="map-1">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">走進四季交織的文化時光</h3>
-                        <p class="text-neutral-80 fw-normal">穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">賞楓最佳時間是 11 月中旬，推薦清水寺和南禪寺一帶 🍁</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100" onclick="window.location.href='search.html'">立即探索魅力古都
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">亞洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">日本京都</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">走進四季交織的文化時光</h3>
+                            <p class="text-neutral-80 fw-normal">穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">賞楓最佳時間是 11 月中旬，推薦清水寺和南禪寺一帶 🍁</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100" onclick="window.location.href='search.html'">立即探索魅力古都
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--第2個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">2</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-2.png" class="img-fluid rounded-5 h-100" alt="map-2">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">亞洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">南韓首爾</span>
+                  <!--第2個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">2</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-2.png" class="img-fluid rounded-5 map-img" alt="map-2">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">從街邊美食到韓劇場景</h3>
-                        <p class="text-neutral-80 fw-normal">白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">弘大周邊週五傍晚最熱鬧，小吃與街頭藝人齊發✨</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">感受韓系風格日常
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">亞洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">南韓首爾</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">從街邊美食到韓劇場景</h3>
+                            <p class="text-neutral-80 fw-normal">白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">弘大周邊週五傍晚最熱鬧，小吃與街頭藝人齊發✨</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">感受韓系風格日常
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--第3個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">3</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-3.png" class="img-fluid rounded-5 h-100" alt="map-3">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">歐洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">法國巴黎</span>
+                  <!--第3個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">3</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-3.png" class="img-fluid rounded-5 map-img" alt="map-3">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">在藝術與咖啡香中迷路</h3>
-                        <p class="text-neutral-80 fw-normal">穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">走進瑪黑區，最容易與巴黎風格不期而遇 ☕️</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">開啟我的巴黎報險
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">歐洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">法國巴黎</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">在藝術與咖啡香中迷路</h3>
+                            <p class="text-neutral-80 fw-normal">穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">走進瑪黑區，最容易與巴黎風格不期而遇 ☕️</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">開啟我的巴黎報險
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--第4個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">4</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-4.png" class="img-fluid rounded-5 h-100" alt="map-4">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">大洋洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">澳洲雪梨</span>
+                  <!--第4個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">4</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-4.png" class="img-fluid rounded-5 map-img" alt="map-4">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">城市與大自然的交會</h3>
-                        <p class="text-neutral-80 fw-normal">清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">別錯過傍晚在雪梨港看日落＋欣賞歌劇院夜燈 ✨</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">現在就飛向南半球
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">大洋洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">澳洲雪梨</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">城市與大自然的交會</h3>
+                            <p class="text-neutral-80 fw-normal">清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">別錯過傍晚在雪梨港看日落＋欣賞歌劇院夜燈 ✨</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">現在就飛向南半球
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--第5個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">5</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-5.png" class="img-fluid rounded-5 h-100" alt="map-5">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">非洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">埃及開羅</span>
+                  <!--第5個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">5</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-5.png" class="img-fluid rounded-5 map-img" alt="map-5">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">穿越千年時光的沙漠冒險</h3>
-                        <p class="text-neutral-80 fw-normal">乘著駱駝走過古老遺跡，抬頭仰望太陽神的光芒，在歷史與傳說之間迷失。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">建議早上 8 點前到吉薩金字塔，避開人潮與烈日 ☀️</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">揭開古文明的面紗
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">非洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">埃及開羅</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">穿越千年時光的沙漠冒險</h3>
+                            <p class="text-neutral-80 fw-normal">乘著駱駝走過古老遺跡，抬頭仰望太陽神的光芒，在歷史與傳說之間迷失。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">建議早上 8 點前到吉薩金字塔，避開人潮與烈日 ☀️</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">揭開古文明的面紗
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -410,61 +413,65 @@
           </div>
           <div class="tab-pane fade" id="pills-asia" role="tabpanel" aria-labelledby="pills-asia-tab">
             <div class="row d-flex flex-nowrap">
-              <!--第1個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">1</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-1.png" class="img-fluid rounded-5 h-100" alt="map-1">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">亞洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">日本京都</span>
+              <div class="swiper pt-11">
+                <div class="swiper-wrapper">
+                  <!--第1個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">1</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-1.png" class="img-fluid rounded-5 map-img" alt="map-1">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">走進四季交織的文化時光</h3>
-                        <p class="text-neutral-80 fw-normal">穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">賞楓最佳時間是 11 月中旬，推薦清水寺和南禪寺一帶 🍁</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">立即探索魅力古都
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">亞洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">日本京都</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">走進四季交織的文化時光</h3>
+                            <p class="text-neutral-80 fw-normal">穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">賞楓最佳時間是 11 月中旬，推薦清水寺和南禪寺一帶 🍁</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100" onclick="window.location.href='search.html'">立即探索魅力古都
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--第2個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">2</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-2.png" class="img-fluid rounded-5 h-100" alt="map-2">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">亞洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">南韓首爾</span>
+                  <!--第2個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">2</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-2.png" class="img-fluid rounded-5 map-img" alt="map-2">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">從街邊美食到韓劇場景</h3>
-                        <p class="text-neutral-80 fw-normal">白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">弘大周邊週五傍晚最熱鬧，小吃與街頭藝人齊發✨</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">感受韓系風格日常
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">亞洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">南韓首爾</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">從街邊美食到韓劇場景</h3>
+                            <p class="text-neutral-80 fw-normal">白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">弘大周邊週五傍晚最熱鬧，小吃與街頭藝人齊發✨</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">感受韓系風格日常
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -474,31 +481,35 @@
           </div>
           <div class="tab-pane fade" id="pills-europe" role="tabpanel" aria-labelledby="pills-europe-tab">
             <div class="row d-flex flex-nowrap">
-              <!--第3個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">3</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-3.png" class="img-fluid rounded-5 h-100" alt="map-3">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">歐洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">法國巴黎</span>
+              <div class="swiper pt-11">
+                <div class="swiper-wrapper">
+                  <!--第3個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">3</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-3.png" class="img-fluid rounded-5 map-img" alt="map-3">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">在藝術與咖啡香中迷路</h3>
-                        <p class="text-neutral-80 fw-normal">穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">走進瑪黑區，最容易與巴黎風格不期而遇 ☕️</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">開啟我的巴黎報險
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">歐洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">法國巴黎</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">在藝術與咖啡香中迷路</h3>
+                            <p class="text-neutral-80 fw-normal">穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">走進瑪黑區，最容易與巴黎風格不期而遇 ☕️</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">開啟我的巴黎報險
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -508,36 +519,46 @@
           </div>
           <div class="tab-pane fade" id="pills-america" role="tabpanel" aria-labelledby="pills-america-tab">
             <div class="row d-flex flex-nowrap">
-              <!--沒有美洲-->
+              <div class="swiper pt-11">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <!--沒有美洲-->
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-oceania" role="tabpanel" aria-labelledby="pills-oceania-tab">
             <div class="row d-flex flex-nowrap">
-              <!--第4個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">4</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-4.png" class="img-fluid rounded-5 h-100" alt="map-4">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">大洋洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">澳洲雪梨</span>
+              <div class="swiper pt-11">
+                <div class="swiper-wrapper">
+                  <!--第4個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">4</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-4.png" class="img-fluid rounded-5 map-img" alt="map-4">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">城市與大自然的交會</h3>
-                        <p class="text-neutral-80 fw-normal">清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">別錯過傍晚在雪梨港看日落＋欣賞歌劇院夜燈 ✨</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">現在就飛向南半球
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">大洋洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">澳洲雪梨</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">城市與大自然的交會</h3>
+                            <p class="text-neutral-80 fw-normal">清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">別錯過傍晚在雪梨港看日落＋欣賞歌劇院夜燈 ✨</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">現在就飛向南半球
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -547,31 +568,35 @@
           </div>
           <div class="tab-pane fade" id="pills-africa" role="tabpanel" aria-labelledby="pills-africa-tab">
             <div class="row d-flex flex-nowrap">
-              <!--第5個-->
-              <div class="col-7">
-                <div class="bg-white rounded-7 position-relative">
-                  <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">5</span>
-                  <div class="row py-4 px-6">
-                    <div class="col-md-5 ps-0">
-                      <img src="/assets/images/index/map-5.png" class="img-fluid rounded-5 h-100" alt="map-5">
-                    </div>
-                    <div class="col-md-7">
-                      <div class="p-0">
-                        <div class="mb-2">
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4 me-2">非洲</span>
-                          <span class="d-inline-block bg-primary-10 fw-bold rounded-3 py-2 px-4">埃及開羅</span>
+              <div class="swiper pt-11">
+                <div class="swiper-wrapper">
+                  <!--第5個-->
+                  <div class="swiper-slide">
+                    <div class="bg-white rounded-7 position-relative">
+                      <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">5</span>
+                      <div class="row py-4 px-6">
+                        <div class="col-md-5 ps-0 mb-lg-0 mb-2">
+                          <img src="/assets/images/index/map-5.png" class="img-fluid rounded-5 map-img" alt="map-5">
                         </div>
-                        <h3 class="fs-1 fw-bold mb-2">穿越千年時光的沙漠冒險</h3>
-                        <p class="text-neutral-80 fw-normal">乘著駱駝走過古老遺跡，抬頭仰望太陽神的光芒，在歷史與傳說之間迷失。</p>
-                        <div class="d-flex justify-content-between mb-8">
-                          <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 px-4 py-2 me-3">ZOBAA 建議</span>
-                          <p class="text-primary mb-0">建議早上 8 點前到吉薩金字塔，避開人潮與烈日 ☀️</p>
-                        </div>
-                        <button type="button" class="d-flex align-items-center bg-black text-white p-5 rounded-8 fw-bold border-0 w-100">揭開古文明的面紗
-                          <div class="bg-white rounded-8 ms-auto">
-                            <span class="material-symbols-outlined d-block text-black">arrow_forward</span>
+                        <div class="col-md-7">
+                          <div class="p-0">
+                            <div class="mb-2">
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">非洲</span>
+                              <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">埃及開羅</span>
+                            </div>
+                            <h3 class="fs-lg-1 fs-3 fw-bold mb-2">穿越千年時光的沙漠冒險</h3>
+                            <p class="text-neutral-80 fw-normal">乘著駱駝走過古老遺跡，抬頭仰望太陽神的光芒，在歷史與傳說之間迷失。</p>
+                            <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
+                              <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
+                              <p class="text-primary fs-lg-8 fs-9 mb-0">建議早上 8 點前到吉薩金字塔，避開人潮與烈日 ☀️</p>
+                            </div>
+                            <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">揭開古文明的面紗
+                              <div class="bg-white rounded-8 ms-auto">
+                                <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
+                              </div>
+                            </button>
                           </div>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -580,162 +605,6 @@
             </div>
           </div>
         </div>
-        <!--RWD-->
-        <div class="d-lg-none">
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides 輪播內容放這-->
-                <div class="swiper-slide pt-9">
-                  <div class="bg-white rounded-7 position-relative">
-                    <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">1</span>
-                    <div class="row py-4 px-6">
-                      <div class="col-md-5 ps-0 mb-lg-0 mb-2">
-                        <img src="/assets/images/index/map-1.png" class="img-fluid rounded-5 map-img" alt="map-1">
-                      </div>
-                      <div class="col-md-7">
-                        <div class="p-0">
-                          <div class="mb-2">
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">亞洲</span>
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">日本京都</span>
-                          </div>
-                          <h3 class="fs-lg-1 fs-3 fw-bold mb-2">走進四季交織的文化時光</h3>
-                          <p class="text-neutral-80 fw-normal">穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。</p>
-                          <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
-                            <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
-                            <p class="text-primary fs-lg-8 fs-9 mb-0">賞楓最佳時間是 11 月中旬，推薦清水寺和南禪寺一帶 🍁</p>
-                          </div>
-                          <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100" onclick="window.location.href='search.html'">立即探索魅力古都
-                            <div class="bg-white rounded-8 ms-auto">
-                              <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide pt-9">
-                  <div class="bg-white rounded-7 position-relative">
-                    <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">2</span>
-                    <div class="row py-4 px-6">
-                      <div class="col-md-5 ps-0 mb-lg-0 mb-2">
-                        <img src="/assets/images/index/map-2.png" class="img-fluid rounded-5 map-img" alt="map-2">
-                      </div>
-                      <div class="col-md-7">
-                        <div class="p-0">
-                          <div class="mb-2">
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">亞洲</span>
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">南韓首爾</span>
-                          </div>
-                          <h3 class="fs-lg-1 fs-3 fw-bold mb-2">從街邊美食到韓劇場景</h3>
-                          <p class="text-neutral-80 fw-normal">白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。</p>
-                          <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
-                            <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
-                            <p class="text-primary fs-lg-8 fs-9 mb-0">弘大周邊週五傍晚最熱鬧，小吃與街頭藝人齊發✨</p>
-                          </div>
-                          <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">感受韓系風格日常
-                            <div class="bg-white rounded-8 ms-auto">
-                              <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide pt-9">
-                  <div class="bg-white rounded-7 position-relative">
-                    <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">3</span>
-                    <div class="row py-4 px-6">
-                      <div class="col-md-5 ps-0 mb-lg-0 mb-2">
-                        <img src="/assets/images/index/map-3.png" class="img-fluid rounded-5 map-img" alt="map-3">
-                      </div>
-                      <div class="col-md-7">
-                        <div class="p-0">
-                          <div class="mb-2">
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">歐洲</span>
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">法國巴黎</span>
-                          </div>
-                          <h3 class="fs-lg-1 fs-3 fw-bold mb-2">在藝術與咖啡香中迷路</h3>
-                          <p class="text-neutral-80 fw-normal">穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。</p>
-                          <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
-                            <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
-                            <p class="text-primary fs-lg-8 fs-9 mb-0">走進瑪黑區，最容易與巴黎風格不期而遇 ☕️</p>
-                          </div>
-                          <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">開啟我的巴黎報險
-                            <div class="bg-white rounded-8 ms-auto">
-                              <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide pt-9">
-                  <div class="bg-white rounded-7 position-relative">
-                    <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">4</span>
-                    <div class="row py-4 px-6">
-                      <div class="col-md-5 ps-0 mb-lg-0 mb-2">
-                        <img src="/assets/images/index/map-4.png" class="img-fluid rounded-5 map-img" alt="map-4">
-                      </div>
-                      <div class="col-md-7">
-                        <div class="p-0">
-                          <div class="mb-2">
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">大洋洲</span>
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">澳洲雪梨</span>
-                          </div>
-                          <h3 class="fs-lg-1 fs-3 fw-bold mb-2">城市與大自然的交會</h3>
-                          <p class="text-neutral-80 fw-normal">清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。</p>
-                          <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
-                            <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
-                            <p class="text-primary fs-lg-8 fs-9 mb-0">別錯過傍晚在雪梨港看日落＋欣賞歌劇院夜燈 ✨</p>
-                          </div>
-                          <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">現在就飛向南半球
-                            <div class="bg-white rounded-8 ms-auto">
-                              <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide pt-9">
-                  <div class="bg-white rounded-7 position-relative">
-                    <span class="d-block fs-200 poppins-regular fst-italic position-absolute number-position">5</span>
-                    <div class="row py-4 px-6">
-                      <div class="col-md-5 ps-0 mb-lg-0 mb-2">
-                        <img src="/assets/images/index/map-5.png" class="img-fluid rounded-5 map-img" alt="map-5">
-                      </div>
-                      <div class="col-md-7">
-                        <div class="p-0">
-                          <div class="mb-2">
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4 me-2">非洲</span>
-                            <span class="d-inline-block bg-primary-10 fw-bold rounded-3 fs-lg-8 fs-9 py-2 px-4">埃及開羅</span>
-                          </div>
-                          <h3 class="fs-lg-1 fs-3 fw-bold mb-2">穿越千年時光的沙漠冒險</h3>
-                          <p class="text-neutral-80 fw-normal">乘著駱駝走過古老遺跡，抬頭仰望太陽神的光芒，在歷史與傳說之間迷失。</p>
-                          <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap align-items-center mb-lg-8 mb-5">
-                            <span class="d-inline-flex align-items-center bg-primary-10 fw-bold text-nowrap rounded-3 fs-lg-8 fs-9 px-4 py-2 me-3 mb-lg-0 mb-2">ZOBAA 建議</span>
-                            <p class="text-primary fs-lg-8 fs-9 mb-0">建議早上 8 點前到吉薩金字塔，避開人潮與烈日 ☀️</p>
-                          </div>
-                          <button type="button" class="d-flex align-items-center bg-black text-white p-lg-5 py-4 px-5  rounded-8 fw-bold fs-lg-8 fs-9 border-0 w-100">揭開古文明的面紗
-                            <div class="bg-white rounded-8 ms-auto">
-                              <span class="material-symbols-outlined d-block text-black p-2">arrow_forward</span>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <!-- If we need pagination 分頁點-->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div> 
       </div>
     </div>
     <!--斜角切-->
