@@ -40,18 +40,3 @@
 .member-hover {
   display: none;
 }
-
-/* 滑鼠移上 .d-flex 外層時觸發 */
-.bg-member-hover:hover {
-  background-color: $primary-10; 
-}
-
-/* 滑鼠移上時，顯示 member-hover */
-.bg-member-hover:hover .member-hover {
-  display: flex;
-}
-
-/* 滑鼠移上時，隱藏原本的 span 名稱 */
-.bg-member-hover:hover > span.fs-6 {
-  display: none;
-}
