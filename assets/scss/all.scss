@@ -5,6 +5,7 @@
 
 /* Bootstrap 基礎必須先引入 */
 @import '../../node_modules/bootstrap/scss/functions';
+@import "bootstrap/scss/mixins";
 
 /*修改變數*/
 @import './helpers/variables';

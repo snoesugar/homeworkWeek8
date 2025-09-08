@@ -63,7 +63,7 @@
       </div>
       <div class="modal-body d-flex p-lg-8 px-6 overflow-x-hidden">
         <div class="d-xxl-block d-none">
-          <div class="swiper w-600 h-1000">
+          <div class="swiper swiperheader w-600 h-1000">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides 輪播內容放這-->
@@ -149,7 +149,7 @@
       </div>
       <div class="modal-body d-flex p-8">
         <div class="d-xxl-block d-none">
-          <div class="swiper w-600 h-1000">
+          <div class="swiper swiperheader w-600 h-1000">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides 輪播內容放這-->
@@ -290,78 +290,53 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
 
 <!--全部輪播-->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const swiperContainers = document.querySelectorAll(".swiper");
+document.addEventListener("DOMContentLoaded", function () {
+  // 輪播 A → swiperheader
+  document.querySelectorAll(".swiperheader").forEach(container => {
+    new Swiper(container, {
+      spaceBetween: 16,
+      pagination: {
+        el: container.querySelector(".swiper-pagination"),
+      },
+      navigation: {
+        nextEl: container.querySelector(".swiper-button-next"),
+        prevEl: container.querySelector(".swiper-button-prev"),
+      },
+      scrollbar: {
+        el: container.querySelector(".swiper-scrollbar"),
+      },
+      autoplay: true,
+      slidesPerView: 3,
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        1296: { slidesPerView: 1 },
+      },
+    });
+  });
 
-  swiperContainers.forEach((container) => {
-    if (container.classList.contains("swiperheader")) {
-      // 輪播 A 設定
-      new Swiper(container, {
-        // 間距
-          spaceBetween: 16,
-          // 分頁
-          pagination: {
-            el: container.querySelector(".swiper-pagination"),
-          },
-          // 左右箭頭
-          navigation: {
-            nextEl: container.querySelector(".swiper-button-next"),
-            prevEl: container.querySelector(".swiper-button-prev"),
-          },
-          // 滾動條
-          scrollbar: {
-            el: container.querySelector(".swiper-scrollbar"),
-          },
-          autoplay: true,
-          slidesPerView: 3,
-
-          // 響應式設定
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 1,
-            },
-            1296: {
-              slidesPerView: 1.8,
-            },
-          },
-      });
-    } else if (container.classList.contains("swiper")) {
-      // 輪播 B 設定
-      new Swiper(container, {
-        // 間距
-          spaceBetween: 16,
-          // 分頁
-          pagination: {
-            el: container.querySelector(".swiper-pagination"),
-          },
-          // 左右箭頭
-          navigation: {
-            nextEl: container.querySelector(".swiper-button-next"),
-            prevEl: container.querySelector(".swiper-button-prev"),
-          },
-          // 滾動條
-          scrollbar: {
-            el: container.querySelector(".swiper-scrollbar"),
-          },
-          autoplay: true,
-          slidesPerView: 3,
-          // 響應式設定
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 1,
-            },
-            1296: {
-              slidesPerView: 1,
-            },
-          },
-      });
-    }
+  // 輪播 B → swiper 但不是 swiperheader
+  document.querySelectorAll(".swiper:not(.swiperheader)").forEach(container => {
+    new Swiper(container, {
+      spaceBetween: 16,
+      pagination: {
+        el: container.querySelector(".swiper-pagination"),
+      },
+      navigation: {
+        nextEl: container.querySelector(".swiper-button-next"),
+        prevEl: container.querySelector(".swiper-button-prev"),
+      },
+      scrollbar: {
+        el: container.querySelector(".swiper-scrollbar"),
+      },
+      autoplay: true,
+      slidesPerView: 3,
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        1296: { slidesPerView: 1.8 },
+      },
+    });
   });
 });
 </script>

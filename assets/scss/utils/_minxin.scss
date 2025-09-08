@@ -1,4 +1,4 @@
-@media (max-width: 992px) {
+@include media-breakpoint-down(lg) { 
   /*header*/
   .navbar.navbar-expand-lg {
     background-color: white;
@@ -84,10 +84,11 @@
   .edit-hover {
     width: 100%;
   }
-}
+ }
+
 
 /*文字中斷點*/
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) { 
   .fs-lg-1.fs-3 {
     font-size: 48px !important;
   }
@@ -143,4 +144,4 @@
   .bg-member-hover:hover > .d-flex.align-items-center.mb-lg-0.mb-4 span.fs-6 {
     display: none;
   }
-}
+ }
