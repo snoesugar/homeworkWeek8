@@ -61,8 +61,8 @@
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body d-flex p-lg-8 px-6 overflow-hidden">
-        <div class="d-lg-block d-none">
+      <div class="modal-body d-flex p-lg-8 px-6 overflow-x-hidden">
+        <div class="d-xxl-block d-none">
           <div class="swiper w-600 h-1000">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -141,23 +141,23 @@
   </div>
 </div>
 <!--註冊-->
-<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+<div class="modal fade overflow-x-hidden" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-fullscreen modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex p-8">
-        <d-lg-block class="d-lg-block d-none">
-          <div class="swiper w-600">
+        <div class="d-xxl-block d-none">
+          <div class="swiper w-600 h-1000">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides 輪播內容放這-->
-                <div class="swiper-slide position-relative">
+                <div class="swiper-slide">
                   <img src="/assets/images/login/cover-1.png" class="img-fluid rounded-40" alt="cover-1">
                 </div>
                 <div class="swiper-slide">
-                  <img src="/assets/images/login/cover-2.png" class="img-fluid rounded-40" alt="cover-2">
+                  <img src="/assets/images/login/cover-2.png" class="img-fluid rounded-40 h-100" alt="cover-2">
                 </div>
                 <div class="swiper-slide">
                   <img src="/assets/images/login/cover-3.png" class="img-fluid rounded-40" alt="cover-3">
@@ -166,7 +166,7 @@
             <!-- If we need pagination 分頁點-->
             <div class="swiper-pagination"></div>
           </div>
-        </d-lg-block>
+        </div>
         <div class="d-flex justify-content-center align-items-center w-100">
           <div class="w-600">
             <h1 class="fs-lg-1 fs-3 fw-bold mb-lg-8 mb-6">歡迎加入 ZOBAA</h2>
@@ -288,17 +288,16 @@ registerPassword.addEventListener("input", toggleRegisterBtn);
 registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
 </script>
 
-<!--輪播-->
+<!--全部輪播-->
 <script>
-   document.addEventListener("DOMContentLoaded", function () {
-    // 找出所有存在的 swiper 容器
-    const swiperContainers = document.querySelectorAll(".swiper");
+  document.addEventListener("DOMContentLoaded", function () {
+  const swiperContainers = document.querySelectorAll(".swiper");
 
-    // 如果頁面上有輪播，才啟動
-    if (swiperContainers.length > 0) {
-      swiperContainers.forEach((container, index) => {
-        new Swiper(container, {
-          // 間距
+  swiperContainers.forEach((container) => {
+    if (container.classList.contains("swiperheader")) {
+      // 輪播 A 設定
+      new Swiper(container, {
+        // 間距
           spaceBetween: 16,
           // 分頁
           pagination: {
@@ -324,12 +323,45 @@ registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
             768: {
               slidesPerView: 1,
             },
-            992: {
+            1296: {
               slidesPerView: 1.8,
             },
           },
-        });
+      });
+    } else if (container.classList.contains("swiper")) {
+      // 輪播 B 設定
+      new Swiper(container, {
+        // 間距
+          spaceBetween: 16,
+          // 分頁
+          pagination: {
+            el: container.querySelector(".swiper-pagination"),
+          },
+          // 左右箭頭
+          navigation: {
+            nextEl: container.querySelector(".swiper-button-next"),
+            prevEl: container.querySelector(".swiper-button-prev"),
+          },
+          // 滾動條
+          scrollbar: {
+            el: container.querySelector(".swiper-scrollbar"),
+          },
+          autoplay: true,
+          slidesPerView: 3,
+          // 響應式設定
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+            1296: {
+              slidesPerView: 1,
+            },
+          },
       });
     }
   });
+});
 </script>

@@ -34,3 +34,8 @@
 a {
   cursor: pointer;
 }
+
+.modal-dialog.modal-fullscreen {
+  width: 100%;
+  margin: 0;   /* ✅ 移除左右空隙 */
+}
