@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>地點搜尋頁</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script type="module" crossorigin src="/homeworkWeek8/assets/main-BBIA87j2.js"></script>
+    <script type="module" crossorigin src="/homeworkWeek8/assets/main-Dmg4yc5_.js"></script>
     <link rel="stylesheet" crossorigin href="/homeworkWeek8/assets/main-DRx52j3C.css">
   </head>
   <body>
@@ -145,7 +145,7 @@
             </div>
             <button type="button" class="loginBtn text-neutral-60 bg-neutral-40 border-0 py-4 rounded-4 w-100 mb-lg-8 mb-6" onclick="window.location.href='member.html'" disabled>立即登入</button>
             <span class="text-neutral-80">沒有 ZOBAA 帳號嗎？</span>
-            <a class="text-primary fw-semibold" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">立即註冊</a>
+            <a class="text-primary fw-semibold" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">立即註冊</a>
           </div>
         </div>
       </div>
@@ -227,7 +227,7 @@
             <button type="button" class="registerBtn text-neutral-60 bg-neutral-40 border-0 py-4 rounded-4 w-100 mb-4" onclick="window.location.href='member.html'" disabled>立即登入</button>
             <p class="text-neutral-80 fs-9 mb-lg-8 mb-6">建立帳號即表示您同意我們的<a href="#">服務條款</a>及<a href="#">隱私權政策</a></p>
             <span class="text-neutral-80">已經有 ZOBAA 帳號了嗎？</span>
-            <a class="text-primary fw-semibold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">立即登入 </a>
+            <a class="text-primary fw-semibold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">立即登入 </a>
           </div>
         </div>
       </div>
@@ -298,6 +298,15 @@ function toggleRegisterBtn() {
 registerEmail.addEventListener("input", toggleRegisterBtn);
 registerPassword.addEventListener("input", toggleRegisterBtn);
 registerPasswordConfirm.addEventListener("input", toggleRegisterBtn);
+
+// 避免 modal 隱藏時焦點仍留在 modal 內，觸發 aria-hidden 警告
+document.querySelectorAll(".modal").forEach((modalEl) => {
+  modalEl.addEventListener("hide.bs.modal", () => {
+    if (modalEl.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
+  });
+});
 </script>
 
 <!--全部輪播-->
