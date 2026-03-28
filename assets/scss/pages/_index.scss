@@ -28,6 +28,64 @@
 
 /*你的專屬推薦*/
 
+a {
+  text-decoration: none;
+}
+
+.card-list {
+  li {
+    position: relative;
+    z-index: 1;
+    max-width: 416px;
+    width: 65%;
+    height: 600px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    border-radius: 32px;
+    transition: all 0.5s;
+    padding: 32px;
+    &:hover {
+      width: 100%;
+      a {
+        height: auto;
+        padding : 15px;
+        opacity: 100%;
+      }
+    }
+    &:nth-child(1) {
+      background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product1.jpg?raw=true);
+    }
+    &:nth-child(2) {
+      background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product2.jpg?raw=true);
+    }
+    &:nth-child(3) {
+      background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product3.jpg?raw=true);
+    }
+    &:nth-child(4) {
+      background-image: url(https://github.com/0404kai/2025-layout-img/blob/main/week8/product4.jpg?raw=true);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(#221F1E00 60%, #221F1E60);
+    }
+    a {
+      font-weight: bold;
+      color: #000;
+      background-color: #fff;
+      border-radius: 100px;
+      transition: all 0.5s;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+
 .recommend-border {
   border: 1px solid rgba(245, 247, 249, 0.2);
 }
