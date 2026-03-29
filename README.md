@@ -1,48 +1,45 @@
-# 網頁切版直播班 Vite 範例
+# 🌍 ZOBAA - 現代化一站式旅遊探索平台
 
-## Node.js 版本
-  - 專案的 Node.js 版本需為 v18 以上
-  - 查看自己版本指令：`node -v`
+ZOBAA 是一個具備現代化視覺與流暢交互體驗的旅遊資訊網站。整合了熱門景點推薦、即時比價與獨家行程訂購功能，旨在為旅客提供從靈感探索到行程落實的完整解決方案。
 
+🔗 **[點此線上預覽成品](https://snoesugar.github.io/homeworkWeek8/)**
 
-## 指令列表
-- `npm install` - 初次下載該範例專案後，需要使用 npm install 來安裝套件
-- `npm run dev` - 執行開發模式
-  - 若沒有自動開啟瀏覽器，可嘗試手動在瀏覽器上輸入
-    `http://localhost:5173/<專案名稱>/pages/index.html`
-- `npm run build` - 執行編譯模式（不會開啟瀏覽器）
-- `npm run deploy` - 自動化部署
+---
 
-## 資料夾結構
-  - assets # 靜態資源放置處
-    - images # 圖片放置處
-    - scss # SCSS 的樣式放置處
+## 🎯 開發動機與產品理念
 
-  - layout # ejs 模板放置處
-  - pages # 頁面放置處
+「用旅行，收藏世界的樣子。」
+ZOBAA 的開發初衷是為了解決旅遊資訊過於散亂、使用者需頻繁切換平台的痛點。
+* **一站式體驗**：整合交通優惠、一日遊、景點門票與美食餐廳，縮短用戶的規劃路徑。
+* **視覺驅動**：透過高品質的影像呈現與直覺的資訊分類，激發使用者的探索慾望。
 
-- JavaScript 程式碼可寫在 main.js 檔案
+---
 
-### 注意事項
-- 已將 pages 資料夾內的 index.html 預設為首頁，建議不要任意修改 index.html 的檔案名稱
-- .gitignore 檔案是用來忽略掉不該上傳到 GitHub 的檔案（例如 node_modules），請不要移除 .gitignore
+## 🛠️ 技術亮點與工程實踐
 
-## 開發模式的監聽
-vite 專案執行開發模式 `npm run dev` 後即會自動監聽，不需要使用 `Live Sass Compiler` 的 `Watch SCSS` 功能
+本專案展現了在不依賴大型前端框架（如 React/Vue）的情況下，如何建立具備高度可維護性的前端架構：
 
+### 1. 進階樣式架構管理 (SASS/SCSS)
+* **7-1 Pattern**：導入嚴謹的 SCSS 7-1 資料夾結構，將變數、組件、佈局與第三方工具進行標準化組織，大幅提升大型專案樣式的可讀性。
+* **Bootstrap 客製化**：深入優化 Bootstrap 5 內建變數與 `_utilities`，建立符合品牌調性的視覺語彙，而非套用預設樣式。
 
-## 部署 gh-pages 流程說明
-### Windows 版本
-1. 在 GitHub 建立一個新的 Repository
+### 2. 樣板引擎與模組化開發 (EJS)
+* **組件化思維**：運用 **EJS (Embedded JavaScript templates)** 實作組件引入（如 Navbar、Footer），減少冗餘代碼並實現「一處修改，全站更新」的維護效率。
+* **Layout 拆解**：將頁面共用邏輯與個別內容抽離，展現對前端組件化開發的早期掌握。
 
-2. 部署前請務必先將原始碼上傳到 GitHub Repository 也就是初始化 GitHub，因此通常第一步驟會在專案終端機輸入以下指令
-```cmd
-git init # 若已經初始化過就可以不用輸入
-git add .
-git commit -m 'first commit'
-git branch -M main
-git remote add origin [GitHub Repositories Url]
-git push -u origin main // 僅限第一次輸入，往後只需要輸入 git push
-```
+### 3. 動態交互與資料渲染
+* **原生 JavaScript 實作**：使用 Vanilla JS 處理行程卡片的動態渲染與分類篩選邏輯，模擬真實電商平台的資料流處理。
+* **動態組件整合**：結合 **Swiper** 實作流暢的產品輪播，提升品牌高級感。
 
-3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
+### 4. 自動化建構流程
+* **Gulp / Vite 工作流**：利用自動化工具進行 SCSS 編譯與靜態資源壓縮，確保網頁加載效能與標準化的開發環境。
+
+---
+
+## 🚀 技術棧 (Tech Stack)
+
+* **Core:** HTML5, JavaScript (ES6+)
+* **Template Engine:** EJS
+* **Styling:** SASS/SCSS (7-1 Pattern), Bootstrap 5
+* **Interactions:** Swiper
+* **Build Tool:** Vite / Gulp
