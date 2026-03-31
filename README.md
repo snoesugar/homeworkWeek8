@@ -2,7 +2,7 @@
 
 ZOBAA 是一個具備現代化視覺與流暢交互體驗的旅遊資訊網站。整合了熱門景點推薦、即時比價與獨家行程訂購功能，旨在為旅客提供從靈感探索到行程落實的完整解決方案。
 
-🔗 **[點此線上預覽成品](https://snoesugar.github.io/homeworkWeek8/)**
+🔗 **[點此線上預覽成品](https://snoesugar.github.io/ZOBAA/)**
 
 ---
 
